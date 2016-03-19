@@ -1,0 +1,3 @@
+[submodule "themes/robust"]
+	path = themes/robust
+	url = https://github.com/dim0627/hugo_theme_robust.git

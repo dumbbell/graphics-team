@@ -1,0 +1,6 @@
+baseurl = "http://replace-this-with-your-hugo-site.com/"
+languageCode = "en-us"
+title = "The FreeBSD Graphics Team"
+
+[Params]
+  Author = "Jean-Sébastien Pédron"
