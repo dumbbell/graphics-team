@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>The FreeBSD Graphics Team </title>
-    <link>http://replace-this-with-your-hugo-site.com/</link>
+    <link>http://dumbbell.github.io/graphics-team/</link>
     <language>en-us</language>
     <author>Jean-Sébastien Pédron</author>
     <rights>(C) 2014</rights>
@@ -12,10 +12,10 @@
       
         <item>
           <title>Why kernel video drivers?</title>
-          <link>http://replace-this-with-your-hugo-site.com/post/why-kernel-video-drivers/</link>
+          <link>http://dumbbell.github.io/graphics-team/post/why-kernel-video-drivers/</link>
           <pubDate>Fri, 17 Oct 2014 20:20:00 &#43;0100</pubDate>
           <author>Jean-Sébastien Pédron</author>
-          <guid>http://replace-this-with-your-hugo-site.com/post/why-kernel-video-drivers/</guid>
+          <guid>http://dumbbell.github.io/graphics-team/post/why-kernel-video-drivers/</guid>
           <description>&lt;p&gt;Many people wonder why video drivers are moved to the kernel. The
 previous way of doing things was working fine and was supported by all
 Unix. Now, they are afraid of switching to those kernel drivers because
@@ -72,10 +72,10 @@ Linux.&lt;/p&gt;
       
         <item>
           <title>Mesa 10.3.0 committed!</title>
-          <link>http://replace-this-with-your-hugo-site.com/post/mesa-10.3.0-committed/</link>
+          <link>http://dumbbell.github.io/graphics-team/post/mesa-10.3.0-committed/</link>
           <pubDate>Fri, 17 Oct 2014 20:10:00 &#43;0100</pubDate>
           <author>Jean-Sébastien Pédron</author>
-          <guid>http://replace-this-with-your-hugo-site.com/post/mesa-10.3.0-committed/</guid>
+          <guid>http://dumbbell.github.io/graphics-team/post/mesa-10.3.0-committed/</guid>
           <description>
 
 &lt;p&gt;Today, &lt;a href=&#34;https://svnweb.freebsd.org/ports?view=revision&amp;amp;revision=371035&#34;&gt;Koop Mast committed an update to the Mesa
@@ -120,10 +120,10 @@ In this case, Mesa 10.3.0 will be picked automatically.&lt;/p&gt;
       
         <item>
           <title>FreeBSD at the XDC 2014</title>
-          <link>http://replace-this-with-your-hugo-site.com/post/xdc-2014/</link>
+          <link>http://dumbbell.github.io/graphics-team/post/xdc-2014/</link>
           <pubDate>Fri, 17 Oct 2014 20:00:00 &#43;0100</pubDate>
           <author>Jean-Sébastien Pédron</author>
-          <guid>http://replace-this-with-your-hugo-site.com/post/xdc-2014/</guid>
+          <guid>http://dumbbell.github.io/graphics-team/post/xdc-2014/</guid>
           <description>
 
 &lt;p&gt;The &lt;strong&gt;X Developer&amp;rsquo;s Conference&lt;/strong&gt; (XDC) is held every year, in
