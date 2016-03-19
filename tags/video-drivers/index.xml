@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>The FreeBSD Graphics Team </title>
-    <link>http://replace-this-with-your-hugo-site.com/tags/video-drivers/</link>
+    <link>http://dumbbell.github.io/graphics-team/tags/video-drivers/</link>
     <language>en-us</language>
     <author>Jean-Sébastien Pédron</author>
     <rights>(C) 2014</rights>
@@ -12,10 +12,10 @@
       
         <item>
           <title>Why kernel video drivers?</title>
-          <link>http://replace-this-with-your-hugo-site.com/post/why-kernel-video-drivers/</link>
+          <link>http://dumbbell.github.io/graphics-team/post/why-kernel-video-drivers/</link>
           <pubDate>Fri, 17 Oct 2014 20:20:00 &#43;0100</pubDate>
           <author>Jean-Sébastien Pédron</author>
-          <guid>http://replace-this-with-your-hugo-site.com/post/why-kernel-video-drivers/</guid>
+          <guid>http://dumbbell.github.io/graphics-team/post/why-kernel-video-drivers/</guid>
           <description>&lt;p&gt;Many people wonder why video drivers are moved to the kernel. The
 previous way of doing things was working fine and was supported by all
 Unix. Now, they are afraid of switching to those kernel drivers because

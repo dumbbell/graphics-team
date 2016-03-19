@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_dark.min.css">
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/custom.css">
-    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://replace-this-with-your-hugo-site.com//index.xml">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://dumbbell.github.io/graphics-team//index.xml">
 
     
     <title>Why kernel video drivers? - The FreeBSD Graphics Team</title>
@@ -20,16 +20,16 @@
     <meta property="og:type" content="article">
     
 
-    <meta property="og:url" content="http://replace-this-with-your-hugo-site.com/post/why-kernel-video-drivers/">
+    <meta property="og:url" content="http://dumbbell.github.io/graphics-team/post/why-kernel-video-drivers/">
     
-    <meta property="og:image" content="http://replace-this-with-your-hugo-site.com/images/drm.png">
+    <meta property="og:image" content="http://dumbbell.github.io/graphics-team/images/drm.png">
 
   </head>
 
   <body>
 
     <header class="site">
-      <div class="title"><a href="http://replace-this-with-your-hugo-site.com/">The FreeBSD Graphics Team</a></div>
+      <div class="title"><a href="http://dumbbell.github.io/graphics-team/">The FreeBSD Graphics Team</a></div>
     </header>
 
     <div class="container site">
@@ -41,19 +41,19 @@
 
       <article class="single" itemscope="itemscope" itemtype="http://schema.org/Article">
 
-        <meta itemprop="mainEntityOfPage"  itemType="https://schema.org/WebPage" content="http://replace-this-with-your-hugo-site.com/"/>
+        <meta itemprop="mainEntityOfPage"  itemType="https://schema.org/WebPage" content="http://dumbbell.github.io/graphics-team/"/>
         <meta itemprop="dateModified" content="2014-10-17T20:20:00&#43;01:00">
         <meta itemprop="headline" content="Why kernel video drivers?">
         <meta itemprop="description" content="Many people wonder why video drivers are moved to the kernel. The previous way of doing things was working fine and was supported by all Unix. Now, they are afraid of switching to those kernel drivers because they don&rsquo;t understand the reason behind them and have heard about instability and unequal levels of support between different OS versions and GPU makers. I&rsquo;ll try to explain the reasons I know, in the hope you&rsquo;ll better understand and accept this major change in the way we use video cards nowadays.">
-        <meta itemprop="url" content="http://replace-this-with-your-hugo-site.com/post/why-kernel-video-drivers/">
+        <meta itemprop="url" content="http://dumbbell.github.io/graphics-team/post/why-kernel-video-drivers/">
         <div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-          <meta itemprop="url" content="http://replace-this-with-your-hugo-site.com/images/drm.png" />
+          <meta itemprop="url" content="http://dumbbell.github.io/graphics-team/images/drm.png" />
           <meta itemprop="width" content="800">
           <meta itemprop="height" content="800">
         </div>
         <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
           <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
-            <meta itemprop="url" content="http://replace-this-with-your-hugo-site.com/images/logo.jpg">
+            <meta itemprop="url" content="http://dumbbell.github.io/graphics-team/images/logo.jpg">
             <meta itemprop="width" content="100">
             <meta itemprop="height" content="100">
           </div>
@@ -63,7 +63,7 @@
           <meta itemprop="name" content="Jean-Sébastien Pédron">
         </div>
 
-        <div class="image" style="background-image: url(http://replace-this-with-your-hugo-site.com/images/drm.png);"></div>
+        <div class="image" style="background-image: url(http://dumbbell.github.io/graphics-team/images/drm.png);"></div>
 
         <header class="article-header">
           <time itemprop="datePublished" pubdate="pubdate" datetime="2014-10-17T20:20:00&#43;01:00">Fri, Oct 17, 2014</time>
@@ -125,13 +125,13 @@ Linux.</p>
 
 
         <aside>
-          <div class="section"><a href="http://replace-this-with-your-hugo-site.com/tags/Video%20drivers" class="tag">Video drivers</a> </div>
+          <div class="section"><a href="http://dumbbell.github.io/graphics-team/tags/Video%20drivers" class="tag">Video drivers</a> </div>
 
           <div class="section share">
-            <a href="http://www.facebook.com/sharer.php?src=bm&u=http%3a%2f%2freplace-this-with-your-hugo-site.com%2fpost%2fwhy-kernel-video-drivers%2f&t=Why%20kernel%20video%20drivers%3f" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-facebook"></i></a>
-            <a href="http://twitter.com/intent/tweet?url=http%3a%2f%2freplace-this-with-your-hugo-site.com%2fpost%2fwhy-kernel-video-drivers%2f&text=Why%20kernel%20video%20drivers%3f&tw_p=tweetbutton" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-twitter"></i></a>
-            <a href="https://plus.google.com/share?url=http%3a%2f%2freplace-this-with-your-hugo-site.com%2fpost%2fwhy-kernel-video-drivers%2f" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-google-plus"></i></a>
-            <a href="http://getpocket.com/edit?url=http%3a%2f%2freplace-this-with-your-hugo-site.com%2fpost%2fwhy-kernel-video-drivers%2f&title=Why%20kernel%20video%20drivers%3f" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-get-pocket"></i></a>
+            <a href="http://www.facebook.com/sharer.php?src=bm&u=http%3a%2f%2fdumbbell.github.io%2fgraphics-team%2fpost%2fwhy-kernel-video-drivers%2f&t=Why%20kernel%20video%20drivers%3f" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-facebook"></i></a>
+            <a href="http://twitter.com/intent/tweet?url=http%3a%2f%2fdumbbell.github.io%2fgraphics-team%2fpost%2fwhy-kernel-video-drivers%2f&text=Why%20kernel%20video%20drivers%3f&tw_p=tweetbutton" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-twitter"></i></a>
+            <a href="https://plus.google.com/share?url=http%3a%2f%2fdumbbell.github.io%2fgraphics-team%2fpost%2fwhy-kernel-video-drivers%2f" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-google-plus"></i></a>
+            <a href="http://getpocket.com/edit?url=http%3a%2f%2fdumbbell.github.io%2fgraphics-team%2fpost%2fwhy-kernel-video-drivers%2f&title=Why%20kernel%20video%20drivers%3f" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-get-pocket"></i></a>
           </div>
 
           
@@ -154,8 +154,8 @@ Linux.</p>
     <div class="content">
       
       <div class="sm"><article class="li">
-  <a href="http://replace-this-with-your-hugo-site.com/post/why-kernel-video-drivers/" class="clearfix">
-    <div class="image" style="background-image: url(http://replace-this-with-your-hugo-site.com/images/drm.png);"></div>
+  <a href="http://dumbbell.github.io/graphics-team/post/why-kernel-video-drivers/" class="clearfix">
+    <div class="image" style="background-image: url(http://dumbbell.github.io/graphics-team/images/drm.png);"></div>
     <div class="detail">
       <time>Fri, Oct 17, 2014</time>
       <h2 class="title">Why kernel video drivers?</h2>
@@ -166,8 +166,8 @@ Linux.</p>
 </div>
       
       <div class="sm"><article class="li">
-  <a href="http://replace-this-with-your-hugo-site.com/post/mesa-10.3.0-committed/" class="clearfix">
-    <div class="image" style="background-image: url(http://replace-this-with-your-hugo-site.com/images/mesa.png);"></div>
+  <a href="http://dumbbell.github.io/graphics-team/post/mesa-10.3.0-committed/" class="clearfix">
+    <div class="image" style="background-image: url(http://dumbbell.github.io/graphics-team/images/mesa.png);"></div>
     <div class="detail">
       <time>Fri, Oct 17, 2014</time>
       <h2 class="title">Mesa 10.3.0 committed!</h2>
@@ -178,8 +178,8 @@ Linux.</p>
 </div>
       
       <div class="sm"><article class="li">
-  <a href="http://replace-this-with-your-hugo-site.com/post/xdc-2014/" class="clearfix">
-    <div class="image" style="background-image: url(http://replace-this-with-your-hugo-site.com/images/xdc-2014.jpg);"></div>
+  <a href="http://dumbbell.github.io/graphics-team/post/xdc-2014/" class="clearfix">
+    <div class="image" style="background-image: url(http://dumbbell.github.io/graphics-team/images/xdc-2014.jpg);"></div>
     <div class="detail">
       <time>Fri, Oct 17, 2014</time>
       <h2 class="title">FreeBSD at the XDC 2014</h2>
@@ -196,14 +196,14 @@ Linux.</p>
   <div class="section taxonomies">
     <header><div class="title">category</div></header>
     <div class="content">
-      <a href="http://replace-this-with-your-hugo-site.com/categories/the-ports-tree">the-ports-tree</a><a href="http://replace-this-with-your-hugo-site.com/categories/events">events</a><a href="http://replace-this-with-your-hugo-site.com/categories/the-kernel">the-kernel</a>
+      <a href="http://dumbbell.github.io/graphics-team/categories/the-ports-tree">the-ports-tree</a><a href="http://dumbbell.github.io/graphics-team/categories/events">events</a><a href="http://dumbbell.github.io/graphics-team/categories/the-kernel">the-kernel</a>
     </div>
   </div>
   
   <div class="section taxonomies">
     <header><div class="title">tag</div></header>
     <div class="content">
-      <a href="http://replace-this-with-your-hugo-site.com/tags/arm">arm</a><a href="http://replace-this-with-your-hugo-site.com/tags/libinput">libinput</a><a href="http://replace-this-with-your-hugo-site.com/tags/nvidia">nvidia</a><a href="http://replace-this-with-your-hugo-site.com/tags/udev">udev</a><a href="http://replace-this-with-your-hugo-site.com/tags/opencl">opencl</a><a href="http://replace-this-with-your-hugo-site.com/tags/amd">amd</a><a href="http://replace-this-with-your-hugo-site.com/tags/wayland">wayland</a><a href="http://replace-this-with-your-hugo-site.com/tags/video-drivers">video-drivers</a><a href="http://replace-this-with-your-hugo-site.com/tags/mesa">mesa</a>
+      <a href="http://dumbbell.github.io/graphics-team/tags/udev">udev</a><a href="http://dumbbell.github.io/graphics-team/tags/video-drivers">video-drivers</a><a href="http://dumbbell.github.io/graphics-team/tags/mesa">mesa</a><a href="http://dumbbell.github.io/graphics-team/tags/wayland">wayland</a><a href="http://dumbbell.github.io/graphics-team/tags/arm">arm</a><a href="http://dumbbell.github.io/graphics-team/tags/libinput">libinput</a><a href="http://dumbbell.github.io/graphics-team/tags/opencl">opencl</a><a href="http://dumbbell.github.io/graphics-team/tags/amd">amd</a><a href="http://dumbbell.github.io/graphics-team/tags/nvidia">nvidia</a>
     </div>
   </div>
   

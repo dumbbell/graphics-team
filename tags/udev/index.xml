@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>The FreeBSD Graphics Team </title>
-    <link>http://replace-this-with-your-hugo-site.com/tags/udev/</link>
+    <link>http://dumbbell.github.io/graphics-team/tags/udev/</link>
     <language>en-us</language>
     <author>Jean-Sébastien Pédron</author>
     <rights>(C) 2014</rights>
@@ -12,10 +12,10 @@
       
         <item>
           <title>FreeBSD at the XDC 2014</title>
-          <link>http://replace-this-with-your-hugo-site.com/post/xdc-2014/</link>
+          <link>http://dumbbell.github.io/graphics-team/post/xdc-2014/</link>
           <pubDate>Fri, 17 Oct 2014 20:00:00 &#43;0100</pubDate>
           <author>Jean-Sébastien Pédron</author>
-          <guid>http://replace-this-with-your-hugo-site.com/post/xdc-2014/</guid>
+          <guid>http://dumbbell.github.io/graphics-team/post/xdc-2014/</guid>
           <description>
 
 &lt;p&gt;The &lt;strong&gt;X Developer&amp;rsquo;s Conference&lt;/strong&gt; (XDC) is held every year, in
