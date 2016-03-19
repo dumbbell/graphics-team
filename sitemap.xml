@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>http://replace-this-with-your-hugo-site.com/</loc>
+    <lastmod>2014-10-17T20:20:00+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://replace-this-with-your-hugo-site.com/post/why-kernel-video-drivers/</loc>
+    <lastmod>2014-10-17T20:20:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://replace-this-with-your-hugo-site.com/post/mesa-10.3.0-committed/</loc>
+    <lastmod>2014-10-17T20:10:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://replace-this-with-your-hugo-site.com/post/xdc-2014/</loc>
+    <lastmod>2014-10-17T20:00:00+01:00</lastmod>
+  </url>
+  
+</urlset>

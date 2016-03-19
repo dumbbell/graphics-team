@@ -1,0 +1,11 @@
+article.li .summary {
+  text-align: justify;
+  word-break: initial;
+  hyphens: auto;
+}
+
+article.single .article-body p, article.single .article-body li {
+  text-align: justify;
+  word-break: initial;
+  hyphens: auto;
+}
