@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>The FreeBSD Graphics Team </title>
+    <link>http://replace-this-with-your-hugo-site.com/categories/the-kernel/</link>
+    <language>en-us</language>
+    <author>Jean-Sébastien Pédron</author>
+    <rights>(C) 2014</rights>
+    <updated>2014-10-17 20:20:00 &#43;0100 &#43;0100</updated>
+
+    
+      
+        <item>
+          <title>Why kernel video drivers?</title>
+          <link>http://replace-this-with-your-hugo-site.com/post/why-kernel-video-drivers/</link>
+          <pubDate>Fri, 17 Oct 2014 20:20:00 &#43;0100</pubDate>
+          <author>Jean-Sébastien Pédron</author>
+          <guid>http://replace-this-with-your-hugo-site.com/post/why-kernel-video-drivers/</guid>
+          <description>&lt;p&gt;Many people wonder why video drivers are moved to the kernel. The
+previous way of doing things was working fine and was supported by all
+Unix. Now, they are afraid of switching to those kernel drivers because
+they don&amp;rsquo;t understand the reason behind them and have heard about
+instability and unequal levels of support between different OS versions
+and GPU makers.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ll try to explain the reasons I know, in the hope you&amp;rsquo;ll better
+understand and accept this major change in the way we use video cards
+nowadays.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The &lt;strong&gt;X server was an operating system by itself&lt;/strong&gt;: it was able to
+scan the PCI bus to find video devices and it manages the video
+memory. That&amp;rsquo;s why it could work on many incompatible kernels: it
+doesn&amp;rsquo;t use any of its facilities. This approach has obviously many
+major issues, detailed in the following bullets.&lt;/li&gt;
+&lt;li&gt;The &lt;strong&gt;kernel and the X server were both managing hardware&lt;/strong&gt;. This was
+far from elegant and broke features such as suspend/resume.&lt;/li&gt;
+&lt;li&gt;The &lt;strong&gt;X server required root privileges&lt;/strong&gt;. That&amp;rsquo;s why it&amp;rsquo;s
+installed with the &amp;ldquo;setuid” bit set, otherwise a regular
+couldn&amp;rsquo;t start an X session.&lt;/li&gt;
+&lt;li&gt;The &lt;strong&gt;performance was terrible&lt;/strong&gt; compared to platforms (eg. Microsoft
+Windows) where the video drivers are in the kernel (like any other
+drivers).&lt;/li&gt;
+&lt;li&gt;The architecture of X and the tighly integrated drivers made it &lt;strong&gt;hard
+to reuse the code&lt;/strong&gt; if one wants to implement an alternative, such as
+Wayland. But that was true for the system console too: it needed to
+drive the video card.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GPGPU wasn&amp;rsquo;t possible&lt;/strong&gt; without running an X session, because only
+the X server was capable of handling the GPU.&lt;/li&gt;
+&lt;li&gt;It &lt;strong&gt;wasn&amp;rsquo;t possible to access the GPU from a virtual machine&lt;/strong&gt;, for
+the same reason as above.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Today, the kernel drivers address or will address all of these issues.&lt;/p&gt;
+
+&lt;p&gt;Regarding GPGPU using free open-source software on FreeBSD, it&amp;rsquo;s still
+a work in progress. A &amp;ldquo;Hello World” OpenCL program works on my
+machine, but more packaging and polishing is needed to have something
+working out-of-the-box.&lt;/p&gt;
+
+&lt;p&gt;The X server still requires root privileges today on FreeBSD because
+we lack the APIs and tools to allow the server to gain access to input
+devices in a secure manner (remember, the system console needs the
+keyboard too).&lt;/p&gt;
+
+&lt;p&gt;About using the GPU from a VM, we are still far from this goal, even on
+Linux.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+
+  </channel>
+</rss>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>The FreeBSD Graphics Team </title>
+    <link>http://replace-this-with-your-hugo-site.com/tags/wayland/</link>
+    <language>en-us</language>
+    <author>Jean-Sébastien Pédron</author>
+    <rights>(C) 2014</rights>
+    <updated>2014-10-17 20:10:00 &#43;0100 &#43;0100</updated>
+
+    
+      
+        <item>
+          <title>Mesa 10.3.0 committed!</title>
+          <link>http://replace-this-with-your-hugo-site.com/post/mesa-10.3.0-committed/</link>
+          <pubDate>Fri, 17 Oct 2014 20:10:00 &#43;0100</pubDate>
+          <author>Jean-Sébastien Pédron</author>
+          <guid>http://replace-this-with-your-hugo-site.com/post/mesa-10.3.0-committed/</guid>
+          <description>
+
+&lt;p&gt;Today, &lt;a href=&#34;https://svnweb.freebsd.org/ports?view=revision&amp;amp;revision=371035&#34;&gt;Koop Mast committed an update to the Mesa
+ports&lt;/a&gt;
+to have both 9.1.7 and 10.3.0 available.&lt;/p&gt;
+
+&lt;h2 id=&#34;what-s-new:299e12da2ec80e879bf4686011266825&#34;&gt;What&amp;rsquo;s new?&lt;/h2&gt;
+
+&lt;p&gt;Mesa 10.3 brings &lt;strong&gt;major improvements in stability and performance&lt;/strong&gt;,
+especially for Radeon owners, compared to Mesa 9.1. For instance, it
+fixes many of the GPU lockups you may see.&lt;/p&gt;
+
+&lt;p&gt;With Mesa 10.3.0 comes a new port as well: &lt;code&gt;graphics/gbm&lt;/code&gt;. This buffer
+management library is used by other components inside and outside Mesa,
+such as:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;GLAMOR, the 2D acceleration API based on OpenGL, used by at least newer Radeon cards;&lt;/li&gt;
+&lt;li&gt;Weston, the reference compositor from the Wayland project;&lt;/li&gt;
+&lt;li&gt;Clover, the OpenCL library in Mesa.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Beside those components, the X.Org server 1.15 requires Mesa 9.2+ too.&lt;/p&gt;
+
+&lt;h2 id=&#34;only-for-freebsd-10-1:299e12da2ec80e879bf4686011266825&#34;&gt;Only for FreeBSD 10.1+&lt;/h2&gt;
+
+&lt;p&gt;We still need Mesa 9.1.7 because our Intel i915 driver in FreeBSD 9.x
+and FreeBSD 10.0 lacks a feature called
+&amp;ldquo;&lt;a href=&#34;https://bwidawsk.net/blog/index.php/2013/01/i915-hardware-contexts-and-some-bits-about-batchbuffers/&#34;&gt;HW context&lt;/a&gt;&amp;rdquo;.
+This feature allows the switch between multiple OpenGL contexts without
+having to resend them to the card after each switch. Mesa 9.2 and later
+versions require this. That&amp;rsquo;s why Mesa 10.3.0 can&amp;rsquo;t be used on FreeBSD
+9.x or 10.0.&lt;/p&gt;
+
+&lt;p&gt;However, FreeBSD 10.1 and 11-CURRENT
+&lt;a href=&#34;https://svnweb.freebsd.org/base?view=revision&amp;amp;revision=271705&#34;&gt;have this feature&lt;/a&gt;.
+In this case, Mesa 10.3.0 will be picked automatically.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+
+  </channel>
+</rss>

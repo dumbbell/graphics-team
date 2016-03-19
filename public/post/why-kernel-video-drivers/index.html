@@ -1,0 +1,235 @@
+<div class="single">
+  <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="generator" content="Hugo 0.15" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Open+Sans|Marcellus+SC'>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_dark.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/custom.css">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://replace-this-with-your-hugo-site.com//index.xml">
+
+    
+    <title>Why kernel video drivers? - The FreeBSD Graphics Team</title>
+    <meta property='og:title' content="Why kernel video drivers? - The FreeBSD Graphics Team">
+    <meta property="og:type" content="article">
+    
+
+    <meta property="og:url" content="http://replace-this-with-your-hugo-site.com/post/why-kernel-video-drivers/">
+    
+    <meta property="og:image" content="http://replace-this-with-your-hugo-site.com/images/drm.png">
+
+  </head>
+
+  <body>
+
+    <header class="site">
+      <div class="title"><a href="http://replace-this-with-your-hugo-site.com/">The FreeBSD Graphics Team</a></div>
+    </header>
+
+    <div class="container site">
+
+
+
+  <div class="row">
+    <div class="col-sm-9">
+
+      <article class="single" itemscope="itemscope" itemtype="http://schema.org/Article">
+
+        <meta itemprop="mainEntityOfPage"  itemType="https://schema.org/WebPage" content="http://replace-this-with-your-hugo-site.com/"/>
+        <meta itemprop="dateModified" content="2014-10-17T20:20:00&#43;01:00">
+        <meta itemprop="headline" content="Why kernel video drivers?">
+        <meta itemprop="description" content="Many people wonder why video drivers are moved to the kernel. The previous way of doing things was working fine and was supported by all Unix. Now, they are afraid of switching to those kernel drivers because they don&rsquo;t understand the reason behind them and have heard about instability and unequal levels of support between different OS versions and GPU makers. I&rsquo;ll try to explain the reasons I know, in the hope you&rsquo;ll better understand and accept this major change in the way we use video cards nowadays.">
+        <meta itemprop="url" content="http://replace-this-with-your-hugo-site.com/post/why-kernel-video-drivers/">
+        <div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+          <meta itemprop="url" content="http://replace-this-with-your-hugo-site.com/images/drm.png" />
+          <meta itemprop="width" content="800">
+          <meta itemprop="height" content="800">
+        </div>
+        <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+          <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+            <meta itemprop="url" content="http://replace-this-with-your-hugo-site.com/images/logo.jpg">
+            <meta itemprop="width" content="100">
+            <meta itemprop="height" content="100">
+          </div>
+          <meta itemprop="name" content="The FreeBSD Graphics Team">
+        </div>
+        <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+          <meta itemprop="name" content="Jean-Sébastien Pédron">
+        </div>
+
+        <div class="image" style="background-image: url(http://replace-this-with-your-hugo-site.com/images/drm.png);"></div>
+
+        <header class="article-header">
+          <time itemprop="datePublished" pubdate="pubdate" datetime="2014-10-17T20:20:00&#43;01:00">Fri, Oct 17, 2014</time>
+          <h1 class="article-title">Why kernel video drivers?</h1>
+        </header>
+
+        <div class="article-body" itemprop="articleBody">
+          <p>Many people wonder why video drivers are moved to the kernel. The
+previous way of doing things was working fine and was supported by all
+Unix. Now, they are afraid of switching to those kernel drivers because
+they don&rsquo;t understand the reason behind them and have heard about
+instability and unequal levels of support between different OS versions
+and GPU makers.</p>
+
+<p>I&rsquo;ll try to explain the reasons I know, in the hope you&rsquo;ll better
+understand and accept this major change in the way we use video cards
+nowadays.</p>
+
+<ul>
+<li>The <strong>X server was an operating system by itself</strong>: it was able to
+scan the PCI bus to find video devices and it manages the video
+memory. That&rsquo;s why it could work on many incompatible kernels: it
+doesn&rsquo;t use any of its facilities. This approach has obviously many
+major issues, detailed in the following bullets.</li>
+<li>The <strong>kernel and the X server were both managing hardware</strong>. This was
+far from elegant and broke features such as suspend/resume.</li>
+<li>The <strong>X server required root privileges</strong>. That&rsquo;s why it&rsquo;s
+installed with the &ldquo;setuid” bit set, otherwise a regular
+couldn&rsquo;t start an X session.</li>
+<li>The <strong>performance was terrible</strong> compared to platforms (eg. Microsoft
+Windows) where the video drivers are in the kernel (like any other
+drivers).</li>
+<li>The architecture of X and the tighly integrated drivers made it <strong>hard
+to reuse the code</strong> if one wants to implement an alternative, such as
+Wayland. But that was true for the system console too: it needed to
+drive the video card.</li>
+<li><strong>GPGPU wasn&rsquo;t possible</strong> without running an X session, because only
+the X server was capable of handling the GPU.</li>
+<li>It <strong>wasn&rsquo;t possible to access the GPU from a virtual machine</strong>, for
+the same reason as above.</li>
+</ul>
+
+<p>Today, the kernel drivers address or will address all of these issues.</p>
+
+<p>Regarding GPGPU using free open-source software on FreeBSD, it&rsquo;s still
+a work in progress. A &ldquo;Hello World” OpenCL program works on my
+machine, but more packaging and polishing is needed to have something
+working out-of-the-box.</p>
+
+<p>The X server still requires root privileges today on FreeBSD because
+we lack the APIs and tools to allow the server to gain access to input
+devices in a secure manner (remember, the system console needs the
+keyboard too).</p>
+
+<p>About using the GPU from a VM, we are still far from this goal, even on
+Linux.</p>
+
+        </div>
+
+
+        <aside>
+          <div class="section"><a href="http://replace-this-with-your-hugo-site.com/tags/Video%20drivers" class="tag">Video drivers</a> </div>
+
+          <div class="section share">
+            <a href="http://www.facebook.com/sharer.php?src=bm&u=http%3a%2f%2freplace-this-with-your-hugo-site.com%2fpost%2fwhy-kernel-video-drivers%2f&t=Why%20kernel%20video%20drivers%3f" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-facebook"></i></a>
+            <a href="http://twitter.com/intent/tweet?url=http%3a%2f%2freplace-this-with-your-hugo-site.com%2fpost%2fwhy-kernel-video-drivers%2f&text=Why%20kernel%20video%20drivers%3f&tw_p=tweetbutton" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-twitter"></i></a>
+            <a href="https://plus.google.com/share?url=http%3a%2f%2freplace-this-with-your-hugo-site.com%2fpost%2fwhy-kernel-video-drivers%2f" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-google-plus"></i></a>
+            <a href="http://getpocket.com/edit?url=http%3a%2f%2freplace-this-with-your-hugo-site.com%2fpost%2fwhy-kernel-video-drivers%2f&title=Why%20kernel%20video%20drivers%3f" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-get-pocket"></i></a>
+          </div>
+
+          
+          
+          
+        </aside>
+
+      </article>
+    </div>
+
+    <div class="col-sm-3">
+      <aside class="site">
+
+  
+
+  
+
+  <div class="section">
+    <header><div class="title">LatestPosts</div></header>
+    <div class="content">
+      
+      <div class="sm"><article class="li">
+  <a href="http://replace-this-with-your-hugo-site.com/post/why-kernel-video-drivers/" class="clearfix">
+    <div class="image" style="background-image: url(http://replace-this-with-your-hugo-site.com/images/drm.png);"></div>
+    <div class="detail">
+      <time>Fri, Oct 17, 2014</time>
+      <h2 class="title">Why kernel video drivers?</h2>
+      <div class="summary">Many people wonder why video drivers are moved to the kernel. The previous way of doing things was working fine and was supported by all Unix. Now, they are afraid of switching to those kernel drivers because they don&rsquo;t understand the reason behind them and have heard about instability and unequal levels of support between different OS versions and GPU makers. I&rsquo;ll try to explain the reasons I know, in the hope you&rsquo;ll better understand and accept this major change in the way we use video cards nowadays.</div>
+    </div>
+  </a>
+</article>
+</div>
+      
+      <div class="sm"><article class="li">
+  <a href="http://replace-this-with-your-hugo-site.com/post/mesa-10.3.0-committed/" class="clearfix">
+    <div class="image" style="background-image: url(http://replace-this-with-your-hugo-site.com/images/mesa.png);"></div>
+    <div class="detail">
+      <time>Fri, Oct 17, 2014</time>
+      <h2 class="title">Mesa 10.3.0 committed!</h2>
+      <div class="summary">Today, Koop Mast committed an update to the Mesa ports to have both 9.1.7 and 10.3.0 available. What&rsquo;s new? Mesa 10.3 brings major improvements in stability and performance, especially for Radeon owners, compared to Mesa 9.1. For instance, it fixes many of the GPU lockups you may see. With Mesa 10.3.0 comes a new port as well: graphics/gbm. This buffer management library is used by other components inside and outside Mesa, such as: GLAMOR, the 2D acceleration API based on OpenGL, used by at least newer Radeon cards; Weston, the reference compositor from the Wayland project; Clover, the OpenCL library in Mesa.</div>
+    </div>
+  </a>
+</article>
+</div>
+      
+      <div class="sm"><article class="li">
+  <a href="http://replace-this-with-your-hugo-site.com/post/xdc-2014/" class="clearfix">
+    <div class="image" style="background-image: url(http://replace-this-with-your-hugo-site.com/images/xdc-2014.jpg);"></div>
+    <div class="detail">
+      <time>Fri, Oct 17, 2014</time>
+      <h2 class="title">FreeBSD at the XDC 2014</h2>
+      <div class="summary">The X Developer&rsquo;s Conference (XDC) is held every year, in alternation between Europe and North America. This is a great occasion for users and developers interested in the graphics stack to meet in person and discuss. This year&rsquo;s edition was in Bordeaux, France, from October 8th through 10th. François Tigeot, from DragonFlyBSD, and I attended the conference. We met Matthieu Herrb from OpenBSD there. The goal was to show that BSDs are still interested in the graphics stack and that we want to work with the community.</div>
+    </div>
+  </a>
+</article>
+</div>
+      
+    </div>
+  </div>
+
+  
+  <div class="section taxonomies">
+    <header><div class="title">category</div></header>
+    <div class="content">
+      <a href="http://replace-this-with-your-hugo-site.com/categories/the-ports-tree">the-ports-tree</a><a href="http://replace-this-with-your-hugo-site.com/categories/events">events</a><a href="http://replace-this-with-your-hugo-site.com/categories/the-kernel">the-kernel</a>
+    </div>
+  </div>
+  
+  <div class="section taxonomies">
+    <header><div class="title">tag</div></header>
+    <div class="content">
+      <a href="http://replace-this-with-your-hugo-site.com/tags/arm">arm</a><a href="http://replace-this-with-your-hugo-site.com/tags/libinput">libinput</a><a href="http://replace-this-with-your-hugo-site.com/tags/nvidia">nvidia</a><a href="http://replace-this-with-your-hugo-site.com/tags/udev">udev</a><a href="http://replace-this-with-your-hugo-site.com/tags/opencl">opencl</a><a href="http://replace-this-with-your-hugo-site.com/tags/amd">amd</a><a href="http://replace-this-with-your-hugo-site.com/tags/wayland">wayland</a><a href="http://replace-this-with-your-hugo-site.com/tags/video-drivers">video-drivers</a><a href="http://replace-this-with-your-hugo-site.com/tags/mesa">mesa</a>
+    </div>
+  </div>
+  
+
+</aside>
+
+    </div>
+
+  </div>
+
+      </div>
+
+    <footer class="site">
+      <p>&copy; 2014 Jean-Sébastien Pédron</p>
+      <p>Powered by <a href="http://gohugo.io" target="_blank">Hugo</a>,</p>
+      <p>Theme <a href="https://github.com/dim0627/hugo_theme_robust" target="_blank">Robust</a> designed by <a href="http://yet.unresolved.xyz" target="_blank">Daisuke Tsuji</a></p>
+    </footer>
+
+    <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+
+  </body>
+</html>
+
+</div>
