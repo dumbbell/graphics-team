@@ -1,4 +1,5 @@
 baseurl = "http://dumbbell.github.io/graphics-team/"
+canonifyurls = true
 languageCode = "en-us"
 title = "The FreeBSD Graphics Team"
 
