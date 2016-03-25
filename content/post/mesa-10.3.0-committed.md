@@ -1,7 +1,8 @@
 +++
 date = "2014-10-17T20:10:00+01:00"
 title = "Mesa 10.3.0 committed!"
-image = "mesa.png"
+image = "images/mesa.png"
+banner = "images/mesa.png"
 
 categories = [ "The Ports tree" ]
 tags = [ "Mesa", "OpenCL", "Wayland" ]

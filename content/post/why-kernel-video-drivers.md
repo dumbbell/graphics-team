@@ -1,7 +1,8 @@
 +++
 date = "2014-10-17T20:20:00+01:00"
 title = "Why kernel video drivers?"
-image = "drm.png"
+image = "images/drm.png"
+banner = "images/drm.png"
 
 categories = [ "The Kernel" ]
 tags = [ "Video drivers" ]

@@ -1,22 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>The FreeBSD Graphics Team </title>
+    <title>Video Drivers on The FreeBSD Graphics Team</title>
     <link>http://dumbbell.github.io/graphics-team/tags/video-drivers/</link>
+    <description>Recent content in Video Drivers on The FreeBSD Graphics Team</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <author>Jean-Sébastien Pédron</author>
-    <rights>(C) 2014</rights>
-    <updated>2014-10-17 20:20:00 &#43;0100 &#43;0100</updated>
-
+    <lastBuildDate>Fri, 17 Oct 2014 20:20:00 +0100</lastBuildDate>
+    <atom:link href="http://dumbbell.github.io/graphics-team/tags/video-drivers/index.xml" rel="self" type="application/rss+xml" />
     
+    <item>
+      <title>Why kernel video drivers?</title>
+      <link>http://dumbbell.github.io/graphics-team/post/why-kernel-video-drivers/</link>
+      <pubDate>Fri, 17 Oct 2014 20:20:00 +0100</pubDate>
       
-        <item>
-          <title>Why kernel video drivers?</title>
-          <link>http://dumbbell.github.io/graphics-team/post/why-kernel-video-drivers/</link>
-          <pubDate>Fri, 17 Oct 2014 20:20:00 &#43;0100</pubDate>
-          <author>Jean-Sébastien Pédron</author>
-          <guid>http://dumbbell.github.io/graphics-team/post/why-kernel-video-drivers/</guid>
-          <description>&lt;p&gt;Many people wonder why video drivers are moved to the kernel. The
+      <guid>http://dumbbell.github.io/graphics-team/post/why-kernel-video-drivers/</guid>
+      <description>&lt;p&gt;Many people wonder why video drivers are moved to the kernel. The
 previous way of doing things was working fine and was supported by all
 Unix. Now, they are afraid of switching to those kernel drivers because
 they don&amp;rsquo;t understand the reason behind them and have heard about
@@ -66,9 +65,7 @@ keyboard too).&lt;/p&gt;
 &lt;p&gt;About using the GPU from a VM, we are still far from this goal, even on
 Linux.&lt;/p&gt;
 </description>
-        </item>
-      
+    </item>
     
-
   </channel>
 </rss>

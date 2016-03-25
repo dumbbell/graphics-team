@@ -2,7 +2,8 @@
 date = "2016-03-19T12:00:48+01:00"
 draft = true
 title = "Welcome on this new blog"
-image = "hugo-screenshot.jpg"
+image = "images/hugo-screenshot.jpg"
+banner = "images/hugo-screenshot.jpg"
 
 toc = false
 +++

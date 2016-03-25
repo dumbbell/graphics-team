@@ -1,22 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>The FreeBSD Graphics Team </title>
+    <title>Udev on The FreeBSD Graphics Team</title>
     <link>http://dumbbell.github.io/graphics-team/tags/udev/</link>
+    <description>Recent content in Udev on The FreeBSD Graphics Team</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <author>Jean-Sébastien Pédron</author>
-    <rights>(C) 2014</rights>
-    <updated>2014-10-17 20:00:00 &#43;0100 &#43;0100</updated>
-
+    <lastBuildDate>Fri, 17 Oct 2014 20:00:00 +0100</lastBuildDate>
+    <atom:link href="http://dumbbell.github.io/graphics-team/tags/udev/index.xml" rel="self" type="application/rss+xml" />
     
+    <item>
+      <title>FreeBSD at the XDC 2014</title>
+      <link>http://dumbbell.github.io/graphics-team/post/xdc-2014/</link>
+      <pubDate>Fri, 17 Oct 2014 20:00:00 +0100</pubDate>
       
-        <item>
-          <title>FreeBSD at the XDC 2014</title>
-          <link>http://dumbbell.github.io/graphics-team/post/xdc-2014/</link>
-          <pubDate>Fri, 17 Oct 2014 20:00:00 &#43;0100</pubDate>
-          <author>Jean-Sébastien Pédron</author>
-          <guid>http://dumbbell.github.io/graphics-team/post/xdc-2014/</guid>
-          <description>
+      <guid>http://dumbbell.github.io/graphics-team/post/xdc-2014/</guid>
+      <description>
 
 &lt;p&gt;The &lt;strong&gt;X Developer&amp;rsquo;s Conference&lt;/strong&gt; (XDC) is held every year, in
 alternation between Europe and North America. This is a great
@@ -111,9 +110,7 @@ Channel&lt;/a&gt;.
 I posted &lt;a href=&#34;https://www.flickr.com/photos/dumbbell/sets/72157648322164320/&#34;&gt;pictures on
 Flickr&lt;/a&gt;.&lt;/p&gt;
 </description>
-        </item>
-      
+    </item>
     
-
   </channel>
 </rss>
