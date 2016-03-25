@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Console on The FreeBSD Graphics Team</title>
+    <link>http://dumbbell.github.io/graphics-team/tags/console/</link>
+    <description>Recent content in Console on The FreeBSD Graphics Team</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 19 Oct 2014 20:10:00 +0100</lastBuildDate>
+    <atom:link href="http://dumbbell.github.io/graphics-team/tags/console/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>vt(4) enabled by default</title>
+      <link>http://dumbbell.github.io/graphics-team/post/vt-enabled-by-default/</link>
+      <pubDate>Sun, 19 Oct 2014 20:10:00 +0100</pubDate>
+      
+      <guid>http://dumbbell.github.io/graphics-team/post/vt-enabled-by-default/</guid>
+      <description>&lt;p&gt;vt(4), the new console driver, is &lt;a href=&#34;http://dumbbell.github.io/graphics-team/https://svnweb.freebsd.org/base?view=revision&amp;amp;revision=274085&#34;&gt;enabled out-of-the-box in FreeBSD
+11-CURRENT&lt;/a&gt;
+(the development branch of FreeBSD) as of today!&lt;/p&gt;
+
+&lt;p&gt;For those who don&amp;rsquo;t know it yet, vt(4) brings important features:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;It &lt;strong&gt;supports Unicode&lt;/strong&gt; and double-width characters. It finally allows
+to use an UTF-8 locale.&lt;/li&gt;
+&lt;li&gt;It &lt;strong&gt;integrates with the new kernel video drivers&lt;/strong&gt;. That means that
+you can switch from an X session to the console and back. syscons(4)
+was never taught about the KMS drivers, and this was a major
+regression for users because the screen was blank when vt-switching or
+terminating the X server.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;vt(4) has still some issues. Furthermore, it lacks some features
+compared to syscons(4). Known issues are &lt;a href=&#34;http://dumbbell.github.io/graphics-team/https://wiki.freebsd.org/Newcons#Known_Issues&#34;&gt;listed in the
+wiki&lt;/a&gt; and/or
+&lt;a href=&#34;http://dumbbell.github.io/graphics-team/https://bugs.freebsd.org/bugzilla/buglist.cgi?keywords=vt&amp;amp;list_id=28354&amp;amp;resolution=---&#34;&gt;recorded in Bugzilla using the &amp;ldquo;vt” keyword&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Refer to the associated &lt;code&gt;UPDATING&lt;/code&gt; entry to get information about updated
+console settings in &lt;code&gt;/etc/rc.conf&lt;/code&gt; or how to select syscons(4).&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

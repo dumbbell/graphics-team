@@ -1,77 +1,188 @@
-<div class="single">
-  <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <title>Mesa 10.3.0 committed! &middot; The FreeBSD Graphics Team</title>
     <meta name="generator" content="Hugo 0.15" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="The FreeBSD Graphics Team">
+    
+      <meta name="description" content="Informations around the graphics stack">
+    
+    
+    <link rel="icon" href="http://dumbbell.github.io/graphics-team/favicon.ico">
+    <link rel="apple-touch-icon" href="http://dumbbell.github.io/graphics-team/apple-touch-icon.png" />
+    <link rel="stylesheet" href="http://dumbbell.github.io/graphics-team/css/style.css">
+    <link rel="stylesheet" href="http://dumbbell.github.io/graphics-team/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://dumbbell.github.io/graphics-team/css/monokai.css">
+    <link rel="stylesheet" href="http://dumbbell.github.io/graphics-team/fancybox/jquery.fancybox.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+    <meta property="og:title" content="Mesa 10.3.0 committed!" />
+<meta property="og:description" content="Today, Koop Mast committed an update to the Mesa ports to have both 9.1.7 and 10.3.0 available. What&rsquo;s new? Mesa 10.3 brings major improvements in stability and performance, especially for Radeon owners, compared to Mesa 9.1. For instance, it fixes many of the GPU lockups you may see. With Mesa 10.3.0 comes a new port as well: graphics/gbm. This buffer management library is used by other components inside and outside Mesa, such as: GLAMOR, the 2D acceleration API based on OpenGL, used by at least newer Radeon cards; Weston, the reference compositor from the Wayland project; Clover, the OpenCL library in Mesa." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://dumbbell.github.io/graphics-team/post/mesa-10.3.0-committed/" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-    <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Open+Sans|Marcellus+SC'>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_dark.min.css">
-    <link rel="stylesheet" href="http://dumbbell.github.io/graphics-team/css/styles.css">
-    <link rel="stylesheet" href="http://dumbbell.github.io/graphics-team/css/custom.css">
-    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://dumbbell.github.io/graphics-team//index.xml">
+
+<meta property="og:updated_time" content="2014-10-17T20:10:00&#43;01:00"/>
+
+
+
+
+
+
+
+
+
 
     
-    <title>Mesa 10.3.0 committed! - The FreeBSD Graphics Team</title>
-    <meta property='og:title' content="Mesa 10.3.0 committed! - The FreeBSD Graphics Team">
-    <meta property="og:type" content="article">
+    
+<meta itemprop="name" content="Mesa 10.3.0 committed!">
+<meta itemprop="description" content="Today, Koop Mast committed an update to the Mesa ports to have both 9.1.7 and 10.3.0 available. What&rsquo;s new? Mesa 10.3 brings major improvements in stability and performance, especially for Radeon owners, compared to Mesa 9.1. For instance, it fixes many of the GPU lockups you may see. With Mesa 10.3.0 comes a new port as well: graphics/gbm. This buffer management library is used by other components inside and outside Mesa, such as: GLAMOR, the 2D acceleration API based on OpenGL, used by at least newer Radeon cards; Weston, the reference compositor from the Wayland project; Clover, the OpenCL library in Mesa.">
+
+
+<meta itemprop="dateModified" content="2014-10-17T20:10:00&#43;01:00" />
+<meta itemprop="wordCount" content="195">
+
+
+
+<meta itemprop="keywords" content="events,the-kernel,the-ports-tree,amd,arm,console,libinput,mesa,nvidia,opencl,udev,video-drivers,wayland," />
+
     
 
-    <meta property="og:url" content="http://dumbbell.github.io/graphics-team/post/mesa-10.3.0-committed/">
+  <meta name="twitter:card" content="summary"/>
+
+
+
+<meta name="twitter:title" content="Mesa 10.3.0 committed!"/>
+<meta name="twitter:description" content="Today, Koop Mast committed an update to the Mesa ports to have both 9.1.7 and 10.3.0 available. What&rsquo;s new? Mesa 10.3 brings major improvements in stability and performance, especially for Radeon owners, compared to Mesa 9.1. For instance, it fixes many of the GPU lockups you may see. With Mesa 10.3.0 comes a new port as well: graphics/gbm. This buffer management library is used by other components inside and outside Mesa, such as: GLAMOR, the 2D acceleration API based on OpenGL, used by at least newer Radeon cards; Weston, the reference compositor from the Wayland project; Clover, the OpenCL library in Mesa."/>
+
+
+
     
-    <meta property="og:image" content="http://dumbbell.github.io/graphics-team/images/mesa.png">
 
-  </head>
-
-  <body>
-
-    <header class="site">
-      <div class="title"><a href="http://dumbbell.github.io/graphics-team/">The FreeBSD Graphics Team</a></div>
-    </header>
-
-    <div class="container site">
+    
+</head>
+<body>
+<div class="container">
 
 
-
-  <div class="row">
-    <div class="col-sm-9">
-
-      <article class="single" itemscope="itemscope" itemtype="http://schema.org/Article">
-
-        <meta itemprop="mainEntityOfPage"  itemType="https://schema.org/WebPage" content="http://dumbbell.github.io/graphics-team/"/>
-        <meta itemprop="dateModified" content="2014-10-17T20:10:00&#43;01:00">
-        <meta itemprop="headline" content="Mesa 10.3.0 committed!">
-        <meta itemprop="description" content="Today, Koop Mast committed an update to the Mesa ports to have both 9.1.7 and 10.3.0 available. What&rsquo;s new? Mesa 10.3 brings major improvements in stability and performance, especially for Radeon owners, compared to Mesa 9.1. For instance, it fixes many of the GPU lockups you may see. With Mesa 10.3.0 comes a new port as well: graphics/gbm. This buffer management library is used by other components inside and outside Mesa, such as: GLAMOR, the 2D acceleration API based on OpenGL, used by at least newer Radeon cards; Weston, the reference compositor from the Wayland project; Clover, the OpenCL library in Mesa.">
-        <meta itemprop="url" content="http://dumbbell.github.io/graphics-team/post/mesa-10.3.0-committed/">
-        <div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-          <meta itemprop="url" content="http://dumbbell.github.io/graphics-team/images/mesa.png" />
-          <meta itemprop="width" content="800">
-          <meta itemprop="height" content="800">
-        </div>
-        <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
-          <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
-            <meta itemprop="url" content="http://dumbbell.github.io/graphics-team/images/logo.jpg">
-            <meta itemprop="width" content="100">
-            <meta itemprop="height" content="100">
-          </div>
-          <meta itemprop="name" content="The FreeBSD Graphics Team">
-        </div>
-        <div itemprop="author" itemscope itemtype="https://schema.org/Person">
-          <meta itemprop="name" content="Jean-Sébastien Pédron">
-        </div>
-
-        <div class="image" style="background-image: url(http://dumbbell.github.io/graphics-team/images/mesa.png);"></div>
-
-        <header class="article-header">
-          <time itemprop="datePublished" pubdate="pubdate" datetime="2014-10-17T20:10:00&#43;01:00">Fri, Oct 17, 2014</time>
-          <h1 class="article-title">Mesa 10.3.0 committed!</h1>
-        </header>
-
-        <div class="article-body" itemprop="articleBody">
+<div id="container">
+	<header id="header">
+  <div id="header-main" class="header-inner">
+    <div class="outer">
+      <a href="http://dumbbell.github.io/graphics-team/" id="logo"><i class="logo" style="background-image: url('http://dumbbell.github.io/graphics-team/css/images/logo.png')"></i><span class="site-title">The FreeBSD Graphics Team</span></a>
+      <nav id="main-nav">
           
+
+          
+
+          
+      </nav>
+        <nav id="sub-nav">
+          <div class="profile" id="profile-nav">
+            <a id="profile-anchor" href="javascript:;"><img class="avatar" src="http://dumbbell.github.io/graphics-team/"><i class="fa fa-caret-down"></i></a>
+          </div>
+        </nav>
+        <div id="search-form-wrap">
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+              <input type="search" name="q" results="0" class="search-form-input" placeholder="Search">
+              <button type="submit" class="search-form-submit">
+              </button>
+              <input type="hidden" name="q" value="site:http://dumbbell.github.io/graphics-team/">
+         </form>
+        </div>
+    </div>
+  </div>
+  <div id="main-nav-mobile" class="header-sub header-inner">
+    <table class="menu outer">
+      <tbody>
+          <tr>
+          
+
+          
+
+          
+          <td>
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+          <input type="search" name="q" results="0" class="search-form-input" placeholder="Search">
+          <input type="hidden" name="q" value="site:http://dumbbell.github.io/graphics-team/">
+          </form>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</header>
+
+
+   	<div class="outer">
+	    
+<section id="main">
+
+    <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
+        <div class="article-inner">
+            
+                
+                <img src="http://dumbbell.github.io/graphics-team/images/mesa.png" class="article-banner">
+                
+            
+
+            <header class="article-header">
+    <a href="http://dumbbell.github.io/graphics-team/post/mesa-10.3.0-committed/">
+    <h1 class="article-title" itemprop="name">
+        Mesa 10.3.0 committed!
+    </h1>
+    </a>
+    <div class="article-meta">
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2014-10-17 20:10:00 &#43;0100 &#43;0100" itemprop="datePublished">2014-10-17</time>
+            &middot;
+            195
+            words
+            &middot;
+            1
+            minute read
+        </div>
+
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                <a class="article-category-link" href="http://dumbbell.github.io/graphics-team/categories/the-ports-tree">The Ports tree</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                <a class="article-category-link" href="http://dumbbell.github.io/graphics-team/tags/mesa">Mesa</a>
+                &middot;
+                
+                <a class="article-category-link" href="http://dumbbell.github.io/graphics-team/tags/opencl">OpenCL</a>
+                &middot;
+                
+                <a class="article-category-link" href="http://dumbbell.github.io/graphics-team/tags/wayland">Wayland</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+            <div class="article-entry" itemprop="articleBody">
+                
 
 <p>Today, <a href="https://svnweb.freebsd.org/ports?view=revision&amp;revision=371035">Koop Mast committed an update to the Mesa
 ports</a>
@@ -109,128 +220,377 @@ versions require this. That&rsquo;s why Mesa 10.3.0 can&rsquo;t be used on FreeB
 <a href="https://svnweb.freebsd.org/base?view=revision&amp;revision=271705">have this feature</a>.
 In this case, Mesa 10.3.0 will be picked automatically.</p>
 
+            </div>
+            <footer class="article-footer">
+    <a data-url="http://dumbbell.github.io/graphics-team/post/mesa-10.3.0-committed/" data-id="299e12da2ec80e879bf4686011266825" class="article-share-link">
+        Share
+    </a>
+    
+</footer>
+
         </div>
 
+        
+<nav id="article-nav">
+    
+    <a href="http://dumbbell.github.io/graphics-team/post/xdc-2014/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Older
+      </strong>
+      <div class="article-nav-title">FreeBSD at the XDC 2014</div>
+    </a>
+    
 
-        <aside>
-          <div class="section"><a href="http://dumbbell.github.io/graphics-team/tags/Mesa" class="tag">Mesa</a> <a href="http://dumbbell.github.io/graphics-team/tags/OpenCL" class="tag">OpenCL</a> <a href="http://dumbbell.github.io/graphics-team/tags/Wayland" class="tag">Wayland</a> </div>
+    
+    <a href="http://dumbbell.github.io/graphics-team/post/why-kernel-video-drivers/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Newer
+      </strong>
+      <div class="article-nav-title">Why kernel video drivers?</div>
+    </a>
+    
+</nav>
 
-          <div class="section share">
-            <a href="http://www.facebook.com/sharer.php?src=bm&u=http%3a%2f%2fdumbbell.github.io%2fgraphics-team%2fpost%2fmesa-10.3.0-committed%2f&t=Mesa%2010.3.0%20committed%21" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-facebook"></i></a>
-            <a href="http://twitter.com/intent/tweet?url=http%3a%2f%2fdumbbell.github.io%2fgraphics-team%2fpost%2fmesa-10.3.0-committed%2f&text=Mesa%2010.3.0%20committed%21&tw_p=tweetbutton" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-twitter"></i></a>
-            <a href="https://plus.google.com/share?url=http%3a%2f%2fdumbbell.github.io%2fgraphics-team%2fpost%2fmesa-10.3.0-committed%2f" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-google-plus"></i></a>
-            <a href="http://getpocket.com/edit?url=http%3a%2f%2fdumbbell.github.io%2fgraphics-team%2fpost%2fmesa-10.3.0-committed%2f&title=Mesa%2010.3.0%20committed%21" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-get-pocket"></i></a>
-          </div>
 
-          
-          
-          
-        </aside>
+    </article>
 
-      </article>
+    
+    <section id="comments">
+        <div id="disqus_thread">
+            
+        </div>
+    </section>
+    
+</section>
+
+
+	    
+	    <aside id="sidebar">
+    
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        Recents
+    </h3>
+    <div class="widget">
+        <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://dumbbell.github.io/graphics-team/post/migrating-to-git/" class="thumbnail">
+                    
+                        
+                        <span style="background-image:url(http://dumbbell.github.io/graphics-team/images/logo-git.png)" alt="Mesa 10.3.0 committed!" class="thumbnail-image"></span>
+                        
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    <p class="item-category">
+                        <a class="article-category-link" href="http://dumbbell.github.io/graphics-team/categories/the-ports-tree">
+                        The Ports tree
+                        </a>
+                    </p>
+                    
+                    <p class="item-title"><a href="http://dumbbell.github.io/graphics-team/post/migrating-to-git/" class="title">Migrating xorg-dev to Git</a></p>
+                    <p class="item-date">
+                        <time datetime="2014-10-19 20:10:00 &#43;0100 &#43;0100" itemprop="datePublished">2014-10-19</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://dumbbell.github.io/graphics-team/post/vt-enabled-by-default/" class="thumbnail">
+                    
+                        
+                        <span style="background-image:url(http://dumbbell.github.io/graphics-team/images/vt100.jpg)" alt="Mesa 10.3.0 committed!" class="thumbnail-image"></span>
+                        
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    <p class="item-category">
+                        <a class="article-category-link" href="http://dumbbell.github.io/graphics-team/categories/the-kernel">
+                        The Kernel
+                        </a>
+                    </p>
+                    
+                    <p class="item-title"><a href="http://dumbbell.github.io/graphics-team/post/vt-enabled-by-default/" class="title">vt(4) enabled by default</a></p>
+                    <p class="item-date">
+                        <time datetime="2014-10-19 20:10:00 &#43;0100 &#43;0100" itemprop="datePublished">2014-10-19</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://dumbbell.github.io/graphics-team/post/why-kernel-video-drivers/" class="thumbnail">
+                    
+                        
+                        <span style="background-image:url(http://dumbbell.github.io/graphics-team/images/drm.png)" alt="Mesa 10.3.0 committed!" class="thumbnail-image"></span>
+                        
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    <p class="item-category">
+                        <a class="article-category-link" href="http://dumbbell.github.io/graphics-team/categories/the-kernel">
+                        The Kernel
+                        </a>
+                    </p>
+                    
+                    <p class="item-title"><a href="http://dumbbell.github.io/graphics-team/post/why-kernel-video-drivers/" class="title">Why kernel video drivers?</a></p>
+                    <p class="item-date">
+                        <time datetime="2014-10-17 20:20:00 &#43;0100 &#43;0100" itemprop="datePublished">2014-10-17</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://dumbbell.github.io/graphics-team/post/mesa-10.3.0-committed/" class="thumbnail">
+                    
+                        
+                        <span style="background-image:url(http://dumbbell.github.io/graphics-team/images/mesa.png)" alt="Mesa 10.3.0 committed!" class="thumbnail-image"></span>
+                        
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    <p class="item-category">
+                        <a class="article-category-link" href="http://dumbbell.github.io/graphics-team/categories/the-ports-tree">
+                        The Ports tree
+                        </a>
+                    </p>
+                    
+                    <p class="item-title"><a href="http://dumbbell.github.io/graphics-team/post/mesa-10.3.0-committed/" class="title">Mesa 10.3.0 committed!</a></p>
+                    <p class="item-date">
+                        <time datetime="2014-10-17 20:10:00 &#43;0100 &#43;0100" itemprop="datePublished">2014-10-17</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://dumbbell.github.io/graphics-team/post/xdc-2014/" class="thumbnail">
+                    
+                        
+                        <span style="background-image:url(http://dumbbell.github.io/graphics-team/images/xdc-2014.jpg)" alt="Mesa 10.3.0 committed!" class="thumbnail-image"></span>
+                        
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    <p class="item-category">
+                        <a class="article-category-link" href="http://dumbbell.github.io/graphics-team/categories/events">
+                        Events
+                        </a>
+                    </p>
+                    
+                    <p class="item-title"><a href="http://dumbbell.github.io/graphics-team/post/xdc-2014/" class="title">FreeBSD at the XDC 2014</a></p>
+                    <p class="item-date">
+                        <time datetime="2014-10-17 20:00:00 &#43;0100 &#43;0100" itemprop="datePublished">2014-10-17</time>
+                    </p>
+                </div>
+            </li>
+            
+        </ul>
     </div>
-
-    <div class="col-sm-3">
-      <aside class="site">
-
-  
-  <div class="section">
-    <header><div class="title">TableOfContents</div></header>
-    <div class="list-default"><nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#what-s-new:299e12da2ec80e879bf4686011266825">What&rsquo;s new?</a></li>
-<li><a href="#only-for-freebsd-10-1:299e12da2ec80e879bf4686011266825">Only for FreeBSD 10.1+</a></li>
-</ul></li>
-</ul>
-</nav></div>
-  </div>
-  
-
-  
-
-  <div class="section">
-    <header><div class="title">LatestPosts</div></header>
-    <div class="content">
-      
-      <div class="sm"><article class="li">
-  <a href="http://dumbbell.github.io/graphics-team/post/why-kernel-video-drivers/" class="clearfix">
-    <div class="image" style="background-image: url(http://dumbbell.github.io/graphics-team/images/drm.png);"></div>
-    <div class="detail">
-      <time>Fri, Oct 17, 2014</time>
-      <h2 class="title">Why kernel video drivers?</h2>
-      <div class="summary">Many people wonder why video drivers are moved to the kernel. The previous way of doing things was working fine and was supported by all Unix. Now, they are afraid of switching to those kernel drivers because they don&rsquo;t understand the reason behind them and have heard about instability and unequal levels of support between different OS versions and GPU makers. I&rsquo;ll try to explain the reasons I know, in the hope you&rsquo;ll better understand and accept this major change in the way we use video cards nowadays.</div>
-    </div>
-  </a>
-</article>
 </div>
-      
-      <div class="sm"><article class="li">
-  <a href="http://dumbbell.github.io/graphics-team/post/mesa-10.3.0-committed/" class="clearfix">
-    <div class="image" style="background-image: url(http://dumbbell.github.io/graphics-team/images/mesa.png);"></div>
-    <div class="detail">
-      <time>Fri, Oct 17, 2014</time>
-      <h2 class="title">Mesa 10.3.0 committed!</h2>
-      <div class="summary">Today, Koop Mast committed an update to the Mesa ports to have both 9.1.7 and 10.3.0 available. What&rsquo;s new? Mesa 10.3 brings major improvements in stability and performance, especially for Radeon owners, compared to Mesa 9.1. For instance, it fixes many of the GPU lockups you may see. With Mesa 10.3.0 comes a new port as well: graphics/gbm. This buffer management library is used by other components inside and outside Mesa, such as: GLAMOR, the 2D acceleration API based on OpenGL, used by at least newer Radeon cards; Weston, the reference compositor from the Wayland project; Clover, the OpenCL library in Mesa.</div>
-    </div>
-  </a>
-</article>
-</div>
-      
-      <div class="sm"><article class="li">
-  <a href="http://dumbbell.github.io/graphics-team/post/xdc-2014/" class="clearfix">
-    <div class="image" style="background-image: url(http://dumbbell.github.io/graphics-team/images/xdc-2014.jpg);"></div>
-    <div class="detail">
-      <time>Fri, Oct 17, 2014</time>
-      <h2 class="title">FreeBSD at the XDC 2014</h2>
-      <div class="summary">The X Developer&rsquo;s Conference (XDC) is held every year, in alternation between Europe and North America. This is a great occasion for users and developers interested in the graphics stack to meet in person and discuss. This year&rsquo;s edition was in Bordeaux, France, from October 8th through 10th. François Tigeot, from DragonFlyBSD, and I attended the conference. We met Matthieu Herrb from OpenBSD there. The goal was to show that BSDs are still interested in the graphics stack and that we want to work with the community.</div>
-    </div>
-  </a>
-</article>
-</div>
-      
-    </div>
-  </div>
 
-  
-  <div class="section taxonomies">
-    <header><div class="title">category</div></header>
-    <div class="content">
-      <a href="http://dumbbell.github.io/graphics-team/categories/the-kernel">the-kernel</a><a href="http://dumbbell.github.io/graphics-team/categories/the-ports-tree">the-ports-tree</a><a href="http://dumbbell.github.io/graphics-team/categories/events">events</a>
-    </div>
-  </div>
-  
-  <div class="section taxonomies">
-    <header><div class="title">tag</div></header>
-    <div class="content">
-      <a href="http://dumbbell.github.io/graphics-team/tags/mesa">mesa</a><a href="http://dumbbell.github.io/graphics-team/tags/arm">arm</a><a href="http://dumbbell.github.io/graphics-team/tags/nvidia">nvidia</a><a href="http://dumbbell.github.io/graphics-team/tags/video-drivers">video-drivers</a><a href="http://dumbbell.github.io/graphics-team/tags/opencl">opencl</a><a href="http://dumbbell.github.io/graphics-team/tags/wayland">wayland</a><a href="http://dumbbell.github.io/graphics-team/tags/amd">amd</a><a href="http://dumbbell.github.io/graphics-team/tags/libinput">libinput</a><a href="http://dumbbell.github.io/graphics-team/tags/udev">udev</a>
-    </div>
-  </div>
-  
-
-</aside>
-
-    </div>
-
-  </div>
-
-      </div>
-
-    <footer class="site">
-      <p>&copy; 2014 Jean-Sébastien Pédron</p>
-      <p>Powered by <a href="http://gohugo.io" target="_blank">Hugo</a>,</p>
-      <p>Theme <a href="https://github.com/dim0627/hugo_theme_robust" target="_blank">Robust</a> designed by <a href="http://yet.unresolved.xyz" target="_blank">Daisuke Tsuji</a></p>
-    </footer>
-
-    <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
 
     
 
-  </body>
-</html>
 
+<div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+        <ul class="category-list">
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://dumbbell.github.io/graphics-team/categories/events">
+                    events
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://dumbbell.github.io/graphics-team/categories/the-kernel">
+                    the-kernel
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://dumbbell.github.io/graphics-team/categories/the-ports-tree">
+                    the-ports-tree
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+        </ul>
+    </div>
 </div>
+
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        Tags
+    </h3>
+    <div class="widget">
+        <ul class="category-list">
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://dumbbell.github.io/graphics-team/tags/amd">
+                    amd
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://dumbbell.github.io/graphics-team/tags/arm">
+                    arm
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://dumbbell.github.io/graphics-team/tags/console">
+                    console
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://dumbbell.github.io/graphics-team/tags/libinput">
+                    libinput
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://dumbbell.github.io/graphics-team/tags/mesa">
+                    mesa
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://dumbbell.github.io/graphics-team/tags/nvidia">
+                    nvidia
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://dumbbell.github.io/graphics-team/tags/opencl">
+                    opencl
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://dumbbell.github.io/graphics-team/tags/udev">
+                    udev
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://dumbbell.github.io/graphics-team/tags/video-drivers">
+                    video-drivers
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://dumbbell.github.io/graphics-team/tags/wayland">
+                    wayland
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        Tag cloud
+    </h3>
+    <div class="widget tagcloud">
+        
+        <a href="http://dumbbell.github.io/graphics-team/tags/amd" style="font-size: 12px;">amd</a>
+        
+        <a href="http://dumbbell.github.io/graphics-team/tags/arm" style="font-size: 12px;">arm</a>
+        
+        <a href="http://dumbbell.github.io/graphics-team/tags/console" style="font-size: 12px;">console</a>
+        
+        <a href="http://dumbbell.github.io/graphics-team/tags/libinput" style="font-size: 12px;">libinput</a>
+        
+        <a href="http://dumbbell.github.io/graphics-team/tags/mesa" style="font-size: 12px;">mesa</a>
+        
+        <a href="http://dumbbell.github.io/graphics-team/tags/nvidia" style="font-size: 12px;">nvidia</a>
+        
+        <a href="http://dumbbell.github.io/graphics-team/tags/opencl" style="font-size: 12px;">opencl</a>
+        
+        <a href="http://dumbbell.github.io/graphics-team/tags/udev" style="font-size: 12px;">udev</a>
+        
+        <a href="http://dumbbell.github.io/graphics-team/tags/video-drivers" style="font-size: 12px;">video-drivers</a>
+        
+        <a href="http://dumbbell.github.io/graphics-team/tags/wayland" style="font-size: 12px;">wayland</a>
+        
+    </div>
+</div>
+
+
+
+
+    <div id="toTop" class="fa fa-chevron-up"></div>
+</aside>
+
+	    
+	</div>
+</div>
+
+<footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016
+      The FreeBSD Graphics Team © 2016
+    </div>
+  </div>
+</footer>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="http://dumbbell.github.io/graphics-team/fancybox/jquery.fancybox.pack.js"></script>
+<script src="http://dumbbell.github.io/graphics-team/js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<!-- MathJax -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']]}
+  });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</body>
+</html>
