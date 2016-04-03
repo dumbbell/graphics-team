@@ -199,6 +199,10 @@
 
                 
                     <li>
+                        <a href="http://dumbbell.github.io/graphics-team/post/welcome/"><p>Welcome to the new blog</p></a>
+                    </li>
+                
+                    <li>
                         <a href="http://dumbbell.github.io/graphics-team/post/migrating-to-git/"><p>Migrating xorg-dev to Git</p></a>
                     </li>
                 
@@ -212,10 +216,6 @@
                 
                     <li>
                         <a href="http://dumbbell.github.io/graphics-team/post/mesa-10.3.0-committed/"><p>Mesa 10.3.0 committed!</p></a>
-                    </li>
-                
-                    <li>
-                        <a href="http://dumbbell.github.io/graphics-team/post/xdc-2014/"><p>FreeBSD at the XDC 2014</p></a>
                     </li>
                 
             </ul>
@@ -232,7 +232,7 @@
     <header>
     <div class="title">
         
-            <h2><a href="http://dumbbell.github.io/graphics-team/post/migrating-to-git/">Migrating xorg-dev to Git</a></h2>
+            <h2><a href="http://dumbbell.github.io/graphics-team/post/welcome/">Welcome to the new blog</a></h2>
         
         
     </div>
@@ -242,11 +242,11 @@
         
 
         <time class="published"
-            datetime='2014-10-19'>
-            October 19, 2014</time>
+            datetime='2016-03-19'>
+            March 19, 2016</time>
         <span class="author">Jean-Sébastien Pédron</span>
         
-            <p>2 minute read</p>
+            <p>1 minute read</p>
         
         
     </div>
@@ -254,63 +254,36 @@
 
 
     
+    
 
-    <p>We are experimenting with Git to replace the <a href="https://wiki.freebsd.org/Graphics#Development_repository">&ldquo;xorg-dev” Subversion
-repository</a>.</p>
+    
+        
+        
 
-<p>Remember, this repository is used to work on the graphics stack ports
-before they go to the official Ports tree. For instance, this is where
-we worked on the update to Mesa 10.3.0. Now, that Mesa 10.3.0 is
-committed, xorg-dev contains Mesa 10.3.1.</p>
 
-<p>xorg-dev is a Subversion repository containing only the ports and
-infrastructure Makefiles which differ from the official Ports tree. The
-current workflow simply consists of:</p>
 
-<ol>
-<li>prepare a new port or update in xorg-dev&rsquo;s trunk</li>
-<li>when ready, copy the files in a Ports tree working copy</li>
-<li>remove the obsolete files</li>
-<li>commit the change in the Ports tree</li>
-<li>optionally, remove the committed work from xorg-dev</li>
-</ol>
 
-<p>A nice advantage is that xorg-dev remains lighweight. This makes svn
-commands fast.</p>
+    
 
-<p>But problems arise when there are changes committed directly to the
-Ports tree. We must be careful to bring those changes to xorg-dev but
-from time to time, we fail to do so and they are lost. Furthermore, it&rsquo;s
-very hard to track history between xorg-dev and the official Ports tree.</p>
 
-<p>That&rsquo;s why we want to change this workflow and switch to a complete Git
-clone of the Ports tree.</p>
+        
 
-<p>There&rsquo;s already a <a href="https://github.com/freebsd/freebsd-ports">Git mirror of the Ports tree</a>
-available on GitHub. We are going to use this as our upstream repository
-and create another repository, called <a href="https://github.com/freebsd/freebsd-ports-graphics"><code>freebsd-ports-graphics</code> on
-GitHub</a>:
-this is going to be the new xorg-dev.</p>
+        <a href="http://dumbbell.github.io/graphics-team/post/welcome/" class="image featured">
+            <img src="http://dumbbell.github.io/graphics-team/images/hugo-screenshot.jpg" alt="" />
+        </a>
+    
 
-<p>This will allow us to:</p>
 
-<ul>
-<li>have a full Ports tree, so it&rsquo;s easier to test: no need to merge
-anything to <code>/usr/ports</code></li>
-<li>handle conflicts during the developments, not when we want to commit
-the final patch</li>
-<li>keep the history in a single place</li>
-<li>accept GitHub pull requests from anyone (not discussed yet)</li>
-</ul>
+    <p>We finally took time to recover the content of the previous lost blog,
+hosted on <code>http://blogs.freebsdish.org/graphics/</code> and create this new
+blog.</p>
 
-<p>We&rsquo;ll try to use topic branches too (eg. a branch for xorg-server 1.14,
-another one for Mesa 10.3.1 and so on), though this is subject to
-change.</p>
-
-<p>The <a href="https://wiki.freebsd.org/Graphics/Ports_development_workflow">workflow is described on the wiki</a>.</p>
-
-<p>Once the experiment concludes, we&rsquo;ll inform you about our decision to
-either keep Subversion or move to Git.</p>
+<p>Dave Cottlehuber (dch on #freebsd-xorg) was of a great help
+to achieve that! He recovered the articles <a href="http://web.archive.org/web/20150905061215/http://blogs.freebsdish.org/graphics/">from the Web
+archives</a>
+and made them available to us. He also suggested the tools
+we are now using to create and host this blog: <a href="https://pages.github.com/">GitHub
+pages</a> and <a href="http://gohugo.io/">Hugo</a>.</p>
 
 
     <footer>
@@ -318,21 +291,7 @@ either keep Subversion or move to Git.</p>
     
 
     
-        
-            <li>
-                
-                    <i class="fa fa-sitemap">&nbsp;</i>
-                
-        
 
-                
-                    Category
-                
-            </li>
-    
-
-    
-        <li><a href="http://dumbbell.github.io/graphics-team/categories/the-ports-tree">The Ports tree</a></li>
     
 </ul>
 
@@ -340,8 +299,8 @@ either keep Subversion or move to Git.</p>
 </article>
 <ul class="actions pagination">
     
-        <li><a href="http://dumbbell.github.io/graphics-team/post/vt-enabled-by-default/"
-                class="button big previous">vt(4) enabled by default</a></li>
+        <li><a href="http://dumbbell.github.io/graphics-team/post/migrating-to-git/"
+                class="button big previous">Migrating xorg-dev to Git</a></li>
     
 
     
@@ -360,43 +319,43 @@ either keep Subversion or move to Git.</p>
             
 
 
-<li><a href="//twitter.com/share?url=http%3a%2f%2fdumbbell.github.io%2fgraphics-team%2fpost%2fmigrating-to-git%2f&text=Migrating%20xorg-dev%20to%20Git&via=" target="_blank" class="share-btn twitter">
+<li><a href="//twitter.com/share?url=http%3a%2f%2fdumbbell.github.io%2fgraphics-team%2fpost%2fwelcome%2f&text=Welcome%20to%20the%20new%20blog&via=" target="_blank" class="share-btn twitter">
     <i class="fa fa-twitter"></i>
     <p>Twitter</p>
 </a></li>
 
 
-<li><a href="//plus.google.com/share?url=http%3a%2f%2fdumbbell.github.io%2fgraphics-team%2fpost%2fmigrating-to-git%2f" target="_blank" class="share-btn google-plus">
+<li><a href="//plus.google.com/share?url=http%3a%2f%2fdumbbell.github.io%2fgraphics-team%2fpost%2fwelcome%2f" target="_blank" class="share-btn google-plus">
     <i class="fa fa-google-plus"></i>
     <p>Google+</p>
 </a></li>
 
 
-<li><a href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fdumbbell.github.io%2fgraphics-team%2fpost%2fmigrating-to-git%2f" target="_blank" class="share-btn facebook">
+<li><a href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fdumbbell.github.io%2fgraphics-team%2fpost%2fwelcome%2f" target="_blank" class="share-btn facebook">
     <i class="fa fa-facebook"></i>
     <p>Facebook</p>
 </a></li>
 
 
-<li><a href="//reddit.com/submit?url=http%3a%2f%2fdumbbell.github.io%2fgraphics-team%2fpost%2fmigrating-to-git%2f&title=Migrating%20xorg-dev%20to%20Git" target="_blank" class="share-btn reddit">
+<li><a href="//reddit.com/submit?url=http%3a%2f%2fdumbbell.github.io%2fgraphics-team%2fpost%2fwelcome%2f&title=Welcome%20to%20the%20new%20blog" target="_blank" class="share-btn reddit">
     <i class="fa fa-reddit-alien"></i>
     <p>Reddit</p>
 </a></li>
 
 
-<li><a href="//www.linkedin.com/shareArticle?url=http%3a%2f%2fdumbbell.github.io%2fgraphics-team%2fpost%2fmigrating-to-git%2f&title=Migrating%20xorg-dev%20to%20Git" target="_blank" class="share-btn linkedin">
+<li><a href="//www.linkedin.com/shareArticle?url=http%3a%2f%2fdumbbell.github.io%2fgraphics-team%2fpost%2fwelcome%2f&title=Welcome%20to%20the%20new%20blog" target="_blank" class="share-btn linkedin">
     <i class="fa fa-linkedin"></i>
     <p>LinkedIn</p>
 </a></li>
 
 
-<li><a href="//www.stumbleupon.com/submit?url=http%3a%2f%2fdumbbell.github.io%2fgraphics-team%2fpost%2fmigrating-to-git%2f&title=Migrating%20xorg-dev%20to%20Git" target="_blank" class="share-btn stumbleupon">
+<li><a href="//www.stumbleupon.com/submit?url=http%3a%2f%2fdumbbell.github.io%2fgraphics-team%2fpost%2fwelcome%2f&title=Welcome%20to%20the%20new%20blog" target="_blank" class="share-btn stumbleupon">
     <i class="fa fa-stumbleupon"></i>
     <p>StumbleUpon</p>
 </a></li>
 
 
-<li><a href="mailto:?subject=Check out this post by Jean-S%c3%a9bastien%20P%c3%a9dron&body=http%3a%2f%2fdumbbell.github.io%2fgraphics-team%2fpost%2fmigrating-to-git%2f" target="_blank" class="share-btn email">
+<li><a href="mailto:?subject=Check out this post by Jean-S%c3%a9bastien%20P%c3%a9dron&body=http%3a%2f%2fdumbbell.github.io%2fgraphics-team%2fpost%2fwelcome%2f" target="_blank" class="share-btn email">
     <i class="fa fa-envelope"></i>
     <p>Email</p>
 </a></li>
@@ -445,6 +404,20 @@ either keep Subversion or move to Git.</p>
                     <li>
                         <article>
                             <header>
+                                <h3><a href="http://dumbbell.github.io/graphics-team/post/welcome/">Welcome to the new blog</a></h3>
+                                
+                                    
+                                
+                                <time class="published" datetime=
+                                    '2016-03-19'>
+                                    March 19, 2016</time>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
                                 <h3><a href="http://dumbbell.github.io/graphics-team/post/migrating-to-git/">Migrating xorg-dev to Git</a></h3>
                                 
                                     
@@ -488,20 +461,6 @@ either keep Subversion or move to Git.</p>
                         <article>
                             <header>
                                 <h3><a href="http://dumbbell.github.io/graphics-team/post/mesa-10.3.0-committed/">Mesa 10.3.0 committed!</a></h3>
-                                
-                                    
-                                
-                                <time class="published" datetime=
-                                    '2014-10-17'>
-                                    October 17, 2014</time>
-                            </header>
-                        </article>
-                    </li>
-                
-                    <li>
-                        <article>
-                            <header>
-                                <h3><a href="http://dumbbell.github.io/graphics-team/post/xdc-2014/">FreeBSD at the XDC 2014</a></h3>
                                 
                                     
                                 
