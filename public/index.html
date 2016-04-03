@@ -1,28 +1,44 @@
-<!DOCTYPE html>
-<html lang="en-us">
-<head>
-    <title>The FreeBSD Graphics Team &middot; The FreeBSD Graphics Team</title>
-    <meta name="generator" content="Hugo 0.15" />
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="author" content="The FreeBSD Graphics Team">
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        
+            
+                <title>The FreeBSD Graphics Team</title>
+            
+        
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="generator" content="Hugo 0.15" />
+        
     
-      <meta name="description" content="Informations around the graphics stack">
+        
+        
     
+
     
-      <link href="http://dumbbell.github.io/graphics-team/index.xml" rel="alternate" type="application/rss+xml" title="The FreeBSD Graphics Team" />
-      <link href="http://dumbbell.github.io/graphics-team/index.xml" rel="feed" type="application/rss+xml" title="The FreeBSD Graphics Team" />
+
+    <link rel="apple-touch-icon-precomposed"
+        href='http://dumbbell.github.io/graphics-team/favicon/apple-touch-icon-precomposed-1.png'>
+    <link rel="icon" href='http://dumbbell.github.io/graphics-team/favicon/favicon-1.png'>
     
-    <link rel="icon" href="http://dumbbell.github.io/graphics-team/favicon.ico">
-    <link rel="apple-touch-icon" href="http://dumbbell.github.io/graphics-team/apple-touch-icon.png" />
-    <link rel="stylesheet" href="http://dumbbell.github.io/graphics-team/css/style.css">
-    <link rel="stylesheet" href="http://dumbbell.github.io/graphics-team/css/font-awesome.min.css">
-    <link rel="stylesheet" href="http://dumbbell.github.io/graphics-team/css/monokai.css">
-    <link rel="stylesheet" href="http://dumbbell.github.io/graphics-team/fancybox/jquery.fancybox.css">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
-    <meta property="og:title" content="The FreeBSD Graphics Team" />
-<meta property="og:description" content="" />
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-TileImage"
+        content='/favicon/mstile-1.png'>
+
+
+
+        
+        
+            
+                <meta name="description" content="Information blog around the graphics stack on FreeBSD">
+            
+        
+
+        
+        <meta property="og:title" content="The FreeBSD Graphics Team" />
+<meta property="og:description" content="Information blog around the graphics stack on FreeBSD" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://dumbbell.github.io/graphics-team/" />
 
@@ -37,804 +53,563 @@
 
 
 
-    
-    
+        
 <meta itemprop="name" content="The FreeBSD Graphics Team">
-<meta itemprop="description" content="">
+<meta itemprop="description" content="Information blog around the graphics stack on FreeBSD">
 
 
-    
-    
-
-    
-</head>
-<body>
-<div class="container">
-
-
-<div id="container">
-    <header id="header">
-  <div id="header-main" class="header-inner">
-    <div class="outer">
-      <a href="http://dumbbell.github.io/graphics-team/" id="logo"><i class="logo" style="background-image: url('http://dumbbell.github.io/graphics-team/css/images/logo.png')"></i><span class="site-title">The FreeBSD Graphics Team</span></a>
-      <nav id="main-nav">
-          
-
-          
-
-          
-      </nav>
-        <nav id="sub-nav">
-          <div class="profile" id="profile-nav">
-            <a id="profile-anchor" href="javascript:;"><img class="avatar" src="http://dumbbell.github.io/graphics-team/"><i class="fa fa-caret-down"></i></a>
-          </div>
-        </nav>
-        <div id="search-form-wrap">
-          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
-              <input type="search" name="q" results="0" class="search-form-input" placeholder="Search">
-              <button type="submit" class="search-form-submit">
-              </button>
-              <input type="hidden" name="q" value="site:http://dumbbell.github.io/graphics-team/">
-         </form>
-        </div>
-    </div>
-  </div>
-  <div id="main-nav-mobile" class="header-sub header-inner">
-    <table class="menu outer">
-      <tbody>
-          <tr>
-          
-
-          
-
-          
-          <td>
-          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
-          <input type="search" name="q" results="0" class="search-form-input" placeholder="Search">
-          <input type="hidden" name="q" value="site:http://dumbbell.github.io/graphics-team/">
-          </form>
-        </td>
-      </tr>
-      </tbody>
-    </table>
-  </div>
-</header>
-
-
-    <div class="outer">
-    <section id="main">
-    
-    
-    <article class="article article-type-post" itemscope="" itemprop="blogPost">
-        <div class="article-inner">
-            
-            <a href="http://dumbbell.github.io/graphics-team/post/migrating-to-git/" itemprop="url">
-                
-                <img src="http://dumbbell.github.io/graphics-team/images/logo-git.png" class="article-banner">
-                
-            
-            </a>
-
-            <header class="article-header">
-    <a href="http://dumbbell.github.io/graphics-team/post/migrating-to-git/">
-    <h1 class="article-title" itemprop="name">
-        Migrating xorg-dev to Git
-    </h1>
-    </a>
-    <div class="article-meta">
-        <div class="article-date">
-            <i class="fa fa-calendar"></i>
-            <time datetime="2014-10-19 20:10:00 &#43;0100 &#43;0100" itemprop="datePublished">2014-10-19</time>
-            &middot;
-            342
-            words
-            &middot;
-            2
-            minute read
-        </div>
-
-        
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-folder"></i>
-                
-                <a class="article-category-link" href="http://dumbbell.github.io/graphics-team/categories/the-ports-tree">The Ports tree</a>
-                
-                
-            </div>
-            
         
 
         
-    </div>
-</header>
+        
 
-            <div class="article-entry" itemprop="articleBody">
-                <p>
-                    We are experimenting with Git to replace the &ldquo;xorg-dev” Subversion repository. Remember, this repository is used to work on the graphics stack ports before they go to the official Ports tree. For instance, this is where we worked on the update to Mesa 10.3.0. Now, that Mesa 10.3.0 is committed, xorg-dev contains Mesa 10.3.1. xorg-dev is a Subversion repository containing only the ports and infrastructure Makefiles which differ from the official Ports tree.
-                    <br>
-                </p>
-                <p class="article-more-link">
-                    <a href="http://dumbbell.github.io/graphics-team/post/migrating-to-git/">
-                        Read more
+        
+            <link rel="stylesheet" href="http://dumbbell.github.io/graphics-team/css/google-font.css" />
+            <link rel="stylesheet" href="http://dumbbell.github.io/graphics-team/css/font-awesome.min.css" />
+            <link rel="stylesheet" href="http://dumbbell.github.io/graphics-team/css/main.css" />
+            <link rel="stylesheet" href="http://dumbbell.github.io/graphics-team/css/add-on.css" />
+            <link rel="stylesheet" href="http://dumbbell.github.io/graphics-team/css/monokai-sublime.css">
+            <link rel="stylesheet" href="http://dumbbell.github.io/graphics-team/css/custom.css">
+        
+        
+        
+        
+            
+        
+    </head>
+    <body>
+
+        
+        <div id="wrapper">
+
+    
+    
+<header id="header">
+    
+        <h1><a href="http://dumbbell.github.io/graphics-team/">The FreeBSD Graphics Team</i></a></h1>
+    
+
+    <nav class="links">
+        <ul>
+            
+                <li>
+                    <a href="http://dumbbell.github.io/graphics-team/post/">
+                        
+                            <i class="fa fa-newspaper-o">&nbsp;</i>Blog
                     </a>
-                </p>
-            </div>
-            <footer class="article-footer">
-    <a data-url="http://dumbbell.github.io/graphics-team/post/migrating-to-git/" data-id="fbd31a1748e319aec65f31ff1c80e38d" class="article-share-link">
-        Share
-    </a>
+                </li>
+            
+                <li>
+                    <a href="http://dumbbell.github.io/graphics-team/categories/">
+                        
+                            <i class="fa fa-sitemap">&nbsp;</i>Categories
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="http://dumbbell.github.io/graphics-team/about/">
+                        
+                            <i class="fa fa-user">&nbsp;</i>About
+                    </a>
+                </li>
+            
+        </ul>
+    </nav>
+    <nav class="main">
+        <ul>
+            
+            <li id="share-nav" class="share-menu" style="display:none;">
+                <a class="fa-share-alt" href="#share-menu">Share</a>
+            </li>
+            
+            <li class="search">
+                <a class="fa-search" href="#search">Search</a>
+                <form id="search" method="get" action="//google.com/search">
+                    <input type="text" name="q" placeholder="Search" />
+                    <input type="hidden" name="q" value="site:http://dumbbell.github.io/graphics-team/">
+                </form>
+            </li>
+            <li class="menu">
+                <a class="fa-bars" href="#menu">Menu</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+<section id="menu">
+
     
-</footer>
+        <section>
+            <form class="search" method="get" action="//google.com/search">
+                <input type="text" name="q" placeholder="Search" />
+                <input type="hidden" name="q" value="site:http://dumbbell.github.io/graphics-team/">
+            </form>
+        </section>
 
-        </div>
-    </article>
     
-    <article class="article article-type-post" itemscope="" itemprop="blogPost">
-        <div class="article-inner">
-            
-            <a href="http://dumbbell.github.io/graphics-team/post/vt-enabled-by-default/" itemprop="url">
+        <section>
+            <ul class="links">
                 
-                <img src="http://dumbbell.github.io/graphics-team/images/vt100.jpg" class="article-banner">
+                    <li>
+                        <a href="http://dumbbell.github.io/graphics-team/post/">
+                            <h3>
+                                
+                                    <i class="fa fa-newspaper-o">&nbsp;</i>
+                                
+                                Blog
+                            </h3>
+                        </a>
+                    </li>
                 
-            
-            </a>
+                    <li>
+                        <a href="http://dumbbell.github.io/graphics-team/categories/">
+                            <h3>
+                                
+                                    <i class="fa fa-sitemap">&nbsp;</i>
+                                
+                                Categories
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="http://dumbbell.github.io/graphics-team/about/">
+                            <h3>
+                                
+                                    <i class="fa fa-user">&nbsp;</i>
+                                
+                                About
+                            </h3>
+                        </a>
+                    </li>
+                
+            </ul>
+        </section>
 
-            <header class="article-header">
-    <a href="http://dumbbell.github.io/graphics-team/post/vt-enabled-by-default/">
-    <h1 class="article-title" itemprop="name">
-        vt(4) enabled by default
-    </h1>
-    </a>
-    <div class="article-meta">
-        <div class="article-date">
-            <i class="fa fa-calendar"></i>
-            <time datetime="2014-10-19 20:10:00 &#43;0100 &#43;0100" itemprop="datePublished">2014-10-19</time>
-            &middot;
-            143
-            words
-            &middot;
-            1
-            minute read
-        </div>
+    
+        <section>
+            <ul class="links">
+                <header>
+                    <h3>Recent Posts</h3>
+                </header>
+                
+                    
+                
 
+                
+                    <li>
+                        <a href="http://dumbbell.github.io/graphics-team/post/migrating-to-git/"><p>Migrating xorg-dev to Git</p></a>
+                    </li>
+                
+                    <li>
+                        <a href="http://dumbbell.github.io/graphics-team/post/vt-enabled-by-default/"><p>vt(4) enabled by default</p></a>
+                    </li>
+                
+                    <li>
+                        <a href="http://dumbbell.github.io/graphics-team/post/why-kernel-video-drivers/"><p>Why kernel video drivers?</p></a>
+                    </li>
+                
+                    <li>
+                        <a href="http://dumbbell.github.io/graphics-team/post/mesa-10.3.0-committed/"><p>Mesa 10.3.0 committed!</p></a>
+                    </li>
+                
+                    <li>
+                        <a href="http://dumbbell.github.io/graphics-team/post/xdc-2014/"><p>FreeBSD at the XDC 2014</p></a>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+        
+</section>
+
+    
+    <div id="main">
+        
+            <article class="post">
+    <header>
+    <div class="title">
+        
+            <h2><a href="http://dumbbell.github.io/graphics-team/post/migrating-to-git/">Migrating xorg-dev to Git</a></h2>
         
         
-            
-            
-            <div class="article-category">
-                <i class="fa fa-folder"></i>
-                
-                <a class="article-category-link" href="http://dumbbell.github.io/graphics-team/categories/the-kernel">The Kernel</a>
-                
-                
-            </div>
+    </div>
+    <div class="meta">
+        
             
         
 
+        <time class="published"
+            datetime='2014-10-19'>
+            October 19, 2014</time>
+        <span class="author">Jean-Sébastien Pédron</span>
         
-            
-            
-            <div class="article-category">
-                <i class="fa fa-tags"></i>
-                
-                <a class="article-category-link" href="http://dumbbell.github.io/graphics-team/tags/console">Console</a>
-                
-                
-            </div>
-            
+            <p>2 minute read</p>
+        
         
     </div>
 </header>
 
-            <div class="article-entry" itemprop="articleBody">
-                <p>
-                    vt(4), the new console driver, is enabled out-of-the-box in FreeBSD 11-CURRENT (the development branch of FreeBSD) as of today! For those who don&rsquo;t know it yet, vt(4) brings important features: It supports Unicode and double-width characters. It finally allows to use an UTF-8 locale. It integrates with the new kernel video drivers. That means that you can switch from an X session to the console and back. syscons(4) was never taught about the KMS drivers, and this was a major regression for users because the screen was blank when vt-switching or terminating the X server.
-                    <br>
-                </p>
-                <p class="article-more-link">
-                    <a href="http://dumbbell.github.io/graphics-team/post/vt-enabled-by-default/">
-                        Read more
-                    </a>
-                </p>
-            </div>
-            <footer class="article-footer">
-    <a data-url="http://dumbbell.github.io/graphics-team/post/vt-enabled-by-default/" data-id="515497e3432628be2414c205fe32ec90" class="article-share-link">
-        Share
-    </a>
+
     
-</footer>
 
-        </div>
-    </article>
+    <p>We are experimenting with Git to replace the <a href="https://wiki.freebsd.org/Graphics#Development_repository">&ldquo;xorg-dev” Subversion
+repository</a>.</p>
+
+<p>Remember, this repository is used to work on the graphics stack ports
+before they go to the official Ports tree. For instance, this is where
+we worked on the update to Mesa 10.3.0. Now, that Mesa 10.3.0 is
+committed, xorg-dev contains Mesa 10.3.1.</p>
+
+<p>xorg-dev is a Subversion repository containing only the ports and
+infrastructure Makefiles which differ from the official Ports tree. The
+current workflow simply consists of:</p>
+
+<ol>
+<li>prepare a new port or update in xorg-dev&rsquo;s trunk</li>
+<li>when ready, copy the files in a Ports tree working copy</li>
+<li>remove the obsolete files</li>
+<li>commit the change in the Ports tree</li>
+<li>optionally, remove the committed work from xorg-dev</li>
+</ol>
+
+<p>A nice advantage is that xorg-dev remains lighweight. This makes svn
+commands fast.</p>
+
+<p>But problems arise when there are changes committed directly to the
+Ports tree. We must be careful to bring those changes to xorg-dev but
+from time to time, we fail to do so and they are lost. Furthermore, it&rsquo;s
+very hard to track history between xorg-dev and the official Ports tree.</p>
+
+<p>That&rsquo;s why we want to change this workflow and switch to a complete Git
+clone of the Ports tree.</p>
+
+<p>There&rsquo;s already a <a href="https://github.com/freebsd/freebsd-ports">Git mirror of the Ports tree</a>
+available on GitHub. We are going to use this as our upstream repository
+and create another repository, called <a href="https://github.com/freebsd/freebsd-ports-graphics"><code>freebsd-ports-graphics</code> on
+GitHub</a>:
+this is going to be the new xorg-dev.</p>
+
+<p>This will allow us to:</p>
+
+<ul>
+<li>have a full Ports tree, so it&rsquo;s easier to test: no need to merge
+anything to <code>/usr/ports</code></li>
+<li>handle conflicts during the developments, not when we want to commit
+the final patch</li>
+<li>keep the history in a single place</li>
+<li>accept GitHub pull requests from anyone (not discussed yet)</li>
+</ul>
+
+<p>We&rsquo;ll try to use topic branches too (eg. a branch for xorg-server 1.14,
+another one for Mesa 10.3.1 and so on), though this is subject to
+change.</p>
+
+<p>The <a href="https://wiki.freebsd.org/Graphics/Ports_development_workflow">workflow is described on the wiki</a>.</p>
+
+<p>Once the experiment concludes, we&rsquo;ll inform you about our decision to
+either keep Subversion or move to Git.</p>
+
+
+    <footer>
+        <ul class="stats">
     
-    <article class="article article-type-post" itemscope="" itemprop="blogPost">
-        <div class="article-inner">
-            
-            <a href="http://dumbbell.github.io/graphics-team/post/why-kernel-video-drivers/" itemprop="url">
-                
-                <img src="http://dumbbell.github.io/graphics-team/images/drm.png" class="article-banner">
-                
-            
-            </a>
 
-            <header class="article-header">
-    <a href="http://dumbbell.github.io/graphics-team/post/why-kernel-video-drivers/">
-    <h1 class="article-title" itemprop="name">
-        Why kernel video drivers?
-    </h1>
-    </a>
-    <div class="article-meta">
-        <div class="article-date">
-            <i class="fa fa-calendar"></i>
-            <time datetime="2014-10-17 20:20:00 &#43;0100 &#43;0100" itemprop="datePublished">2014-10-17</time>
-            &middot;
-            390
-            words
-            &middot;
-            2
-            minute read
-        </div>
-
+    
         
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-folder"></i>
+            <li>
                 
-                <a class="article-category-link" href="http://dumbbell.github.io/graphics-team/categories/the-kernel">The Kernel</a>
+                    <i class="fa fa-sitemap">&nbsp;</i>
                 
-                
-            </div>
-            
         
 
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-tags"></i>
                 
-                <a class="article-category-link" href="http://dumbbell.github.io/graphics-team/tags/video-drivers">Video drivers</a>
+                    Category
                 
-                
-            </div>
+            </li>
+    
+
+    
+        <li><a href="http://dumbbell.github.io/graphics-team/categories/the-ports-tree">The Ports tree</a></li>
+    
+</ul>
+
+    </footer>
+</article>
+<ul class="actions pagination">
+    
+        <li><a href="http://dumbbell.github.io/graphics-team/post/vt-enabled-by-default/"
+                class="button big previous">vt(4) enabled by default</a></li>
+    
+
+    
+</ul>
+
+
+
+
+
+            <section id="share-menu">
+    <section id="social-share-nav">
+        <ul class="links">
+            <header>
+                <h3>Share this post <i class="fa fa-smile-o"></i></h3>
+            </header>
             
+
+
+<li><a href="//twitter.com/share?url=http%3a%2f%2fdumbbell.github.io%2fgraphics-team%2fpost%2fmigrating-to-git%2f&text=Migrating%20xorg-dev%20to%20Git&via=" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+</a></li>
+
+
+<li><a href="//plus.google.com/share?url=http%3a%2f%2fdumbbell.github.io%2fgraphics-team%2fpost%2fmigrating-to-git%2f" target="_blank" class="share-btn google-plus">
+    <i class="fa fa-google-plus"></i>
+    <p>Google+</p>
+</a></li>
+
+
+<li><a href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fdumbbell.github.io%2fgraphics-team%2fpost%2fmigrating-to-git%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+</a></li>
+
+
+<li><a href="//reddit.com/submit?url=http%3a%2f%2fdumbbell.github.io%2fgraphics-team%2fpost%2fmigrating-to-git%2f&title=Migrating%20xorg-dev%20to%20Git" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+</a></li>
+
+
+<li><a href="//www.linkedin.com/shareArticle?url=http%3a%2f%2fdumbbell.github.io%2fgraphics-team%2fpost%2fmigrating-to-git%2f&title=Migrating%20xorg-dev%20to%20Git" target="_blank" class="share-btn linkedin">
+    <i class="fa fa-linkedin"></i>
+    <p>LinkedIn</p>
+</a></li>
+
+
+<li><a href="//www.stumbleupon.com/submit?url=http%3a%2f%2fdumbbell.github.io%2fgraphics-team%2fpost%2fmigrating-to-git%2f&title=Migrating%20xorg-dev%20to%20Git" target="_blank" class="share-btn stumbleupon">
+    <i class="fa fa-stumbleupon"></i>
+    <p>StumbleUpon</p>
+</a></li>
+
+
+<li><a href="mailto:?subject=Check out this post by Jean-S%c3%a9bastien%20P%c3%a9dron&body=http%3a%2f%2fdumbbell.github.io%2fgraphics-team%2fpost%2fmigrating-to-git%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+</a></li>
+
+        </ul>
+    </section>
+</section>
+
         
     </div>
-</header>
-
-            <div class="article-entry" itemprop="articleBody">
-                <p>
-                    Many people wonder why video drivers are moved to the kernel. The previous way of doing things was working fine and was supported by all Unix. Now, they are afraid of switching to those kernel drivers because they don&rsquo;t understand the reason behind them and have heard about instability and unequal levels of support between different OS versions and GPU makers. I&rsquo;ll try to explain the reasons I know, in the hope you&rsquo;ll better understand and accept this major change in the way we use video cards nowadays.
-                    <br>
-                </p>
-                <p class="article-more-link">
-                    <a href="http://dumbbell.github.io/graphics-team/post/why-kernel-video-drivers/">
-                        Read more
-                    </a>
-                </p>
-            </div>
-            <footer class="article-footer">
-    <a data-url="http://dumbbell.github.io/graphics-team/post/why-kernel-video-drivers/" data-id="74580c9ce5f17b398e1d58a842154d70" class="article-share-link">
-        Share
-    </a>
     
-</footer>
+<section id="sidebar">
 
-        </div>
-    </article>
     
-    <article class="article article-type-post" itemscope="" itemprop="blogPost">
-        <div class="article-inner">
+        <section id="intro">
             
-            <a href="http://dumbbell.github.io/graphics-team/post/mesa-10.3.0-committed/" itemprop="url">
+            
                 
-                <img src="http://dumbbell.github.io/graphics-team/images/mesa.png" class="article-banner">
+                    <img src="http://dumbbell.github.io/graphics-team/images/logo-freebsd-100px.png" width="" alt="" />
                 
             
-            </a>
+            
+                <header>
+                    <h2>The FreeBSD Graphics Team</h2>
+                    <p>Information blog around the graphics stack on FreeBSD</p>
+                </header>
+            
+            
+        </section>
 
-            <header class="article-header">
-    <a href="http://dumbbell.github.io/graphics-team/post/mesa-10.3.0-committed/">
-    <h1 class="article-title" itemprop="name">
-        Mesa 10.3.0 committed!
-    </h1>
-    </a>
-    <div class="article-meta">
-        <div class="article-date">
-            <i class="fa fa-calendar"></i>
-            <time datetime="2014-10-17 20:10:00 &#43;0100 &#43;0100" itemprop="datePublished">2014-10-17</time>
-            &middot;
-            195
-            words
-            &middot;
-            1
-            minute read
-        </div>
-
-        
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-folder"></i>
-                
-                <a class="article-category-link" href="http://dumbbell.github.io/graphics-team/categories/the-ports-tree">The Ports tree</a>
-                
-                
-            </div>
-            
-        
-
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-tags"></i>
-                
-                <a class="article-category-link" href="http://dumbbell.github.io/graphics-team/tags/mesa">Mesa</a>
-                &middot;
-                
-                <a class="article-category-link" href="http://dumbbell.github.io/graphics-team/tags/opencl">OpenCL</a>
-                &middot;
-                
-                <a class="article-category-link" href="http://dumbbell.github.io/graphics-team/tags/wayland">Wayland</a>
-                
-                
-            </div>
-            
-        
-    </div>
-</header>
-
-            <div class="article-entry" itemprop="articleBody">
-                <p>
-                    Today, Koop Mast committed an update to the Mesa ports to have both 9.1.7 and 10.3.0 available. What&rsquo;s new? Mesa 10.3 brings major improvements in stability and performance, especially for Radeon owners, compared to Mesa 9.1. For instance, it fixes many of the GPU lockups you may see. With Mesa 10.3.0 comes a new port as well: graphics/gbm. This buffer management library is used by other components inside and outside Mesa, such as: GLAMOR, the 2D acceleration API based on OpenGL, used by at least newer Radeon cards; Weston, the reference compositor from the Wayland project; Clover, the OpenCL library in Mesa.
-                    <br>
-                </p>
-                <p class="article-more-link">
-                    <a href="http://dumbbell.github.io/graphics-team/post/mesa-10.3.0-committed/">
-                        Read more
-                    </a>
-                </p>
-            </div>
-            <footer class="article-footer">
-    <a data-url="http://dumbbell.github.io/graphics-team/post/mesa-10.3.0-committed/" data-id="299e12da2ec80e879bf4686011266825" class="article-share-link">
-        Share
-    </a>
     
-</footer>
+        <section id="recent-posts">
+            <ul class="posts">
+                <header>
+                    <h3>Recent Posts</h3>
+                </header>
+                
+                    
+                
 
-        </div>
-    </article>
+                
+                    
+                
+
+                
+                    <li>
+                        <article>
+                            <header>
+                                <h3><a href="http://dumbbell.github.io/graphics-team/post/migrating-to-git/">Migrating xorg-dev to Git</a></h3>
+                                
+                                    
+                                
+                                <time class="published" datetime=
+                                    '2014-10-19'>
+                                    October 19, 2014</time>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <h3><a href="http://dumbbell.github.io/graphics-team/post/vt-enabled-by-default/">vt(4) enabled by default</a></h3>
+                                
+                                    
+                                
+                                <time class="published" datetime=
+                                    '2014-10-19'>
+                                    October 19, 2014</time>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <h3><a href="http://dumbbell.github.io/graphics-team/post/why-kernel-video-drivers/">Why kernel video drivers?</a></h3>
+                                
+                                    
+                                
+                                <time class="published" datetime=
+                                    '2014-10-17'>
+                                    October 17, 2014</time>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <h3><a href="http://dumbbell.github.io/graphics-team/post/mesa-10.3.0-committed/">Mesa 10.3.0 committed!</a></h3>
+                                
+                                    
+                                
+                                <time class="published" datetime=
+                                    '2014-10-17'>
+                                    October 17, 2014</time>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <h3><a href="http://dumbbell.github.io/graphics-team/post/xdc-2014/">FreeBSD at the XDC 2014</a></h3>
+                                
+                                    
+                                
+                                <time class="published" datetime=
+                                    '2014-10-17'>
+                                    October 17, 2014</time>
+                            </header>
+                        </article>
+                    </li>
+                
+
+                
+                    <li>
+                        <ul class="actions">
+                            <li><a href=
+                            
+                                /post/
+                            
+                            class="button">View more posts</a></li>
+                        </ul>
+                    </li>
+                
+            </ul>
+        </section>
+
     
-    <article class="article article-type-post" itemscope="" itemprop="blogPost">
-        <div class="article-inner">
-            
-            <a href="http://dumbbell.github.io/graphics-team/post/xdc-2014/" itemprop="url">
-                
-                <img src="http://dumbbell.github.io/graphics-team/images/xdc-2014.jpg" class="article-banner">
-                
-            
-            </a>
-
-            <header class="article-header">
-    <a href="http://dumbbell.github.io/graphics-team/post/xdc-2014/">
-    <h1 class="article-title" itemprop="name">
-        FreeBSD at the XDC 2014
-    </h1>
-    </a>
-    <div class="article-meta">
-        <div class="article-date">
-            <i class="fa fa-calendar"></i>
-            <time datetime="2014-10-17 20:00:00 &#43;0100 &#43;0100" itemprop="datePublished">2014-10-17</time>
-            &middot;
-            655
-            words
-            &middot;
-            4
-            minute read
-        </div>
-
-        
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-folder"></i>
-                
-                <a class="article-category-link" href="http://dumbbell.github.io/graphics-team/categories/events">Events</a>
-                
-                
-            </div>
-            
-        
-
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-tags"></i>
-                
-                <a class="article-category-link" href="http://dumbbell.github.io/graphics-team/tags/amd">AMD</a>
-                &middot;
-                
-                <a class="article-category-link" href="http://dumbbell.github.io/graphics-team/tags/arm">ARM</a>
-                &middot;
-                
-                <a class="article-category-link" href="http://dumbbell.github.io/graphics-team/tags/libinput">libinput</a>
-                &middot;
-                
-                <a class="article-category-link" href="http://dumbbell.github.io/graphics-team/tags/nvidia">NVIDIA</a>
-                &middot;
-                
-                <a class="article-category-link" href="http://dumbbell.github.io/graphics-team/tags/udev">udev</a>
-                
-                
-            </div>
-            
-        
-    </div>
-</header>
-
-            <div class="article-entry" itemprop="articleBody">
-                <p>
-                    The X Developer&rsquo;s Conference (XDC) is held every year, in alternation between Europe and North America. This is a great occasion for users and developers interested in the graphics stack to meet in person and discuss. This year&rsquo;s edition was in Bordeaux, France, from October 8th through 10th. François Tigeot, from DragonFlyBSD, and I attended the conference. We met Matthieu Herrb from OpenBSD there. The goal was to show that BSDs are still interested in the graphics stack and that we want to work with the community.
-                    <br>
-                </p>
-                <p class="article-more-link">
-                    <a href="http://dumbbell.github.io/graphics-team/post/xdc-2014/">
-                        Read more
-                    </a>
-                </p>
-            </div>
-            <footer class="article-footer">
-    <a data-url="http://dumbbell.github.io/graphics-team/post/xdc-2014/" data-id="bf650b87c593bc5b43a8309cddeddd77" class="article-share-link">
-        Share
-    </a>
     
-</footer>
+    
+    
+        <section id="categories">
+            <ul class="posts">
+                <header>
+                    <h3><a href="http://dumbbell.github.io/graphics-team/categories/">Categories</a></h3>
+                </header>
 
-        </div>
-    </article>
+                
+                    
+                
+
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="http://dumbbell.github.io/graphics-team/categories/the-ports-tree/">the-ports-tree</a>
+                                <span style="float:right;">2</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="http://dumbbell.github.io/graphics-team/categories/the-kernel/">the-kernel</a>
+                                <span style="float:right;">2</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="http://dumbbell.github.io/graphics-team/categories/events/">events</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+            </ul>
+        </section>
     
 
-    <nav id="page-nav">
+    
+        
+        <section class="blurb">
+            <h2>About</h2>
+            <p>The FreeBSD Graphics Team is responsible for maintaining all pieces of the graphics stack, both in the kernel and userland. DRM video drivers, the X.Org server and Mesa are very good examples.</p>
 
-</nav>
+            <ul class="actions">
+                <li><a href="http://dumbbell.github.io/graphics-team/about/" class="button">Learn More</a></li>
+            </ul>
+        </section>
+        
+
+    
+        <section id="footer">
+            
+
+            <p class="copyright">&copy; The FreeBSD Graphics Team. Design: <a href="http://html5up.net" target="_blank">HTML5 UP</a>. Ported by <a href="//github.com/jpescador" target="_blank">Julio Pescador</a>. Powered by <a href="//gohugo.io" target="_blank">Hugo</a></p>
+        </section>
 
 </section>
 
-
-    <aside id="sidebar">
-    
-<div class="widget-wrap">
-    <h3 class="widget-title">
-        Recents
-    </h3>
-    <div class="widget">
-        <ul id="recent-post">
-            
-            <li>
-                <div class="item-thumbnail">
-                    <a href="http://dumbbell.github.io/graphics-team/post/migrating-to-git/" class="thumbnail">
-                    
-                        
-                        <span style="background-image:url(http://dumbbell.github.io/graphics-team/images/logo-git.png)" alt="The FreeBSD Graphics Team" class="thumbnail-image"></span>
-                        
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    <p class="item-category">
-                        <a class="article-category-link" href="http://dumbbell.github.io/graphics-team/categories/the-ports-tree">
-                        The Ports tree
-                        </a>
-                    </p>
-                    
-                    <p class="item-title"><a href="http://dumbbell.github.io/graphics-team/post/migrating-to-git/" class="title">Migrating xorg-dev to Git</a></p>
-                    <p class="item-date">
-                        <time datetime="2014-10-19 20:10:00 &#43;0100 &#43;0100" itemprop="datePublished">2014-10-19</time>
-                    </p>
-                </div>
-            </li>
-            
-            <li>
-                <div class="item-thumbnail">
-                    <a href="http://dumbbell.github.io/graphics-team/post/vt-enabled-by-default/" class="thumbnail">
-                    
-                        
-                        <span style="background-image:url(http://dumbbell.github.io/graphics-team/images/vt100.jpg)" alt="The FreeBSD Graphics Team" class="thumbnail-image"></span>
-                        
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    <p class="item-category">
-                        <a class="article-category-link" href="http://dumbbell.github.io/graphics-team/categories/the-kernel">
-                        The Kernel
-                        </a>
-                    </p>
-                    
-                    <p class="item-title"><a href="http://dumbbell.github.io/graphics-team/post/vt-enabled-by-default/" class="title">vt(4) enabled by default</a></p>
-                    <p class="item-date">
-                        <time datetime="2014-10-19 20:10:00 &#43;0100 &#43;0100" itemprop="datePublished">2014-10-19</time>
-                    </p>
-                </div>
-            </li>
-            
-            <li>
-                <div class="item-thumbnail">
-                    <a href="http://dumbbell.github.io/graphics-team/post/why-kernel-video-drivers/" class="thumbnail">
-                    
-                        
-                        <span style="background-image:url(http://dumbbell.github.io/graphics-team/images/drm.png)" alt="The FreeBSD Graphics Team" class="thumbnail-image"></span>
-                        
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    <p class="item-category">
-                        <a class="article-category-link" href="http://dumbbell.github.io/graphics-team/categories/the-kernel">
-                        The Kernel
-                        </a>
-                    </p>
-                    
-                    <p class="item-title"><a href="http://dumbbell.github.io/graphics-team/post/why-kernel-video-drivers/" class="title">Why kernel video drivers?</a></p>
-                    <p class="item-date">
-                        <time datetime="2014-10-17 20:20:00 &#43;0100 &#43;0100" itemprop="datePublished">2014-10-17</time>
-                    </p>
-                </div>
-            </li>
-            
-            <li>
-                <div class="item-thumbnail">
-                    <a href="http://dumbbell.github.io/graphics-team/post/mesa-10.3.0-committed/" class="thumbnail">
-                    
-                        
-                        <span style="background-image:url(http://dumbbell.github.io/graphics-team/images/mesa.png)" alt="The FreeBSD Graphics Team" class="thumbnail-image"></span>
-                        
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    <p class="item-category">
-                        <a class="article-category-link" href="http://dumbbell.github.io/graphics-team/categories/the-ports-tree">
-                        The Ports tree
-                        </a>
-                    </p>
-                    
-                    <p class="item-title"><a href="http://dumbbell.github.io/graphics-team/post/mesa-10.3.0-committed/" class="title">Mesa 10.3.0 committed!</a></p>
-                    <p class="item-date">
-                        <time datetime="2014-10-17 20:10:00 &#43;0100 &#43;0100" itemprop="datePublished">2014-10-17</time>
-                    </p>
-                </div>
-            </li>
-            
-            <li>
-                <div class="item-thumbnail">
-                    <a href="http://dumbbell.github.io/graphics-team/post/xdc-2014/" class="thumbnail">
-                    
-                        
-                        <span style="background-image:url(http://dumbbell.github.io/graphics-team/images/xdc-2014.jpg)" alt="The FreeBSD Graphics Team" class="thumbnail-image"></span>
-                        
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    <p class="item-category">
-                        <a class="article-category-link" href="http://dumbbell.github.io/graphics-team/categories/events">
-                        Events
-                        </a>
-                    </p>
-                    
-                    <p class="item-title"><a href="http://dumbbell.github.io/graphics-team/post/xdc-2014/" class="title">FreeBSD at the XDC 2014</a></p>
-                    <p class="item-date">
-                        <time datetime="2014-10-17 20:00:00 &#43;0100 &#43;0100" itemprop="datePublished">2014-10-17</time>
-                    </p>
-                </div>
-            </li>
-            
-        </ul>
-    </div>
-</div>
-
-
-    
-
-
-<div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
-    <div class="widget">
-        <ul class="category-list">
-            
-            <li class="category-list-item">
-                <a class="category-list-link" href="http://dumbbell.github.io/graphics-team/categories/events">
-                    events
-                </a>
-                <span class="category-list-count">1</span>
-            </li>
-            
-            <li class="category-list-item">
-                <a class="category-list-link" href="http://dumbbell.github.io/graphics-team/categories/the-kernel">
-                    the-kernel
-                </a>
-                <span class="category-list-count">2</span>
-            </li>
-            
-            <li class="category-list-item">
-                <a class="category-list-link" href="http://dumbbell.github.io/graphics-team/categories/the-ports-tree">
-                    the-ports-tree
-                </a>
-                <span class="category-list-count">2</span>
-            </li>
-            
-        </ul>
-    </div>
-</div>
-
-
-
-    
-
-
-<div class="widget-wrap">
-    <h3 class="widget-title">
-        Tags
-    </h3>
-    <div class="widget">
-        <ul class="category-list">
-            
-            <li class="category-list-item">
-                <a class="category-list-link" href="http://dumbbell.github.io/graphics-team/tags/amd">
-                    amd
-                </a>
-                <span class="category-list-count">1</span>
-            </li>
-            
-            <li class="category-list-item">
-                <a class="category-list-link" href="http://dumbbell.github.io/graphics-team/tags/arm">
-                    arm
-                </a>
-                <span class="category-list-count">1</span>
-            </li>
-            
-            <li class="category-list-item">
-                <a class="category-list-link" href="http://dumbbell.github.io/graphics-team/tags/console">
-                    console
-                </a>
-                <span class="category-list-count">1</span>
-            </li>
-            
-            <li class="category-list-item">
-                <a class="category-list-link" href="http://dumbbell.github.io/graphics-team/tags/libinput">
-                    libinput
-                </a>
-                <span class="category-list-count">1</span>
-            </li>
-            
-            <li class="category-list-item">
-                <a class="category-list-link" href="http://dumbbell.github.io/graphics-team/tags/mesa">
-                    mesa
-                </a>
-                <span class="category-list-count">1</span>
-            </li>
-            
-            <li class="category-list-item">
-                <a class="category-list-link" href="http://dumbbell.github.io/graphics-team/tags/nvidia">
-                    nvidia
-                </a>
-                <span class="category-list-count">1</span>
-            </li>
-            
-            <li class="category-list-item">
-                <a class="category-list-link" href="http://dumbbell.github.io/graphics-team/tags/opencl">
-                    opencl
-                </a>
-                <span class="category-list-count">1</span>
-            </li>
-            
-            <li class="category-list-item">
-                <a class="category-list-link" href="http://dumbbell.github.io/graphics-team/tags/udev">
-                    udev
-                </a>
-                <span class="category-list-count">1</span>
-            </li>
-            
-            <li class="category-list-item">
-                <a class="category-list-link" href="http://dumbbell.github.io/graphics-team/tags/video-drivers">
-                    video-drivers
-                </a>
-                <span class="category-list-count">1</span>
-            </li>
-            
-            <li class="category-list-item">
-                <a class="category-list-link" href="http://dumbbell.github.io/graphics-team/tags/wayland">
-                    wayland
-                </a>
-                <span class="category-list-count">1</span>
-            </li>
-            
-        </ul>
-    </div>
-</div>
-
-
-
-    
-
-
-<div class="widget-wrap">
-    <h3 class="widget-title">
-        Tag cloud
-    </h3>
-    <div class="widget tagcloud">
+            </div>
+        <a id="back-to-top" href="#" class="fa fa-arrow-up fa-border fa-2x"></a>
         
-        <a href="http://dumbbell.github.io/graphics-team/tags/amd" style="font-size: 12px;">amd</a>
         
-        <a href="http://dumbbell.github.io/graphics-team/tags/arm" style="font-size: 12px;">arm</a>
+
         
-        <a href="http://dumbbell.github.io/graphics-team/tags/console" style="font-size: 12px;">console</a>
+            <script src="http://dumbbell.github.io/graphics-team/js/jquery.min.js"></script>
+            <script src="http://dumbbell.github.io/graphics-team/js/skel.min.js"></script>
+            <script src="http://dumbbell.github.io/graphics-team/js/util.js"></script>
+            <script src="http://dumbbell.github.io/graphics-team/js/main.js"></script>
+            <script src="http://dumbbell.github.io/graphics-team/js/backToTop.js"></script>
+            <script src="http://dumbbell.github.io/graphics-team/js/highlight.pack.js"></script>
         
-        <a href="http://dumbbell.github.io/graphics-team/tags/libinput" style="font-size: 12px;">libinput</a>
-        
-        <a href="http://dumbbell.github.io/graphics-team/tags/mesa" style="font-size: 12px;">mesa</a>
-        
-        <a href="http://dumbbell.github.io/graphics-team/tags/nvidia" style="font-size: 12px;">nvidia</a>
-        
-        <a href="http://dumbbell.github.io/graphics-team/tags/opencl" style="font-size: 12px;">opencl</a>
-        
-        <a href="http://dumbbell.github.io/graphics-team/tags/udev" style="font-size: 12px;">udev</a>
-        
-        <a href="http://dumbbell.github.io/graphics-team/tags/video-drivers" style="font-size: 12px;">video-drivers</a>
-        
-        <a href="http://dumbbell.github.io/graphics-team/tags/wayland" style="font-size: 12px;">wayland</a>
-        
-    </div>
-</div>
-
-
-
-
-    <div id="toTop" class="fa fa-chevron-up"></div>
-</aside>
-
-    </div>
-</div>
-
-<footer id="footer">
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2016
-      The FreeBSD Graphics Team © 2016
-    </div>
-  </div>
-</footer>
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="http://dumbbell.github.io/graphics-team/fancybox/jquery.fancybox.pack.js"></script>
-<script src="http://dumbbell.github.io/graphics-team/js/script.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
-
-<!-- MathJax -->
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  tex2jax: {
-    inlineMath: [['$','$'], ['\\(','\\)']]}
-  });
-</script>
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-</body>
+            
+            <script>hljs.initHighlightingOnLoad();</script>
+            
+    </body>
 </html>
+

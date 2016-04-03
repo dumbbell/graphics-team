@@ -1,21 +1,54 @@
+h1, h2, h3, h4, h5, h6,
+.author,
+.button,
+ul.posts article header .published,
+.mini-post header .published,
+.post > header .meta .published,
+.post > footer .stats li,
+header p,
+#header .links ul li a,
+#footer .copyright,
+#menu .links > li a p
+{
+  letter-spacing: 0.15em;
+}
+
+.post > .image.featured img,
+.post > .image.featured:hover img {
+  -moz-transform: initial;
+  -webkit-transform: initial;
+  -ms-transform: initial;
+  transform: initial;
+}
+
+.post > p, .blurb p {
+  text-align: justify;
+}
+
+code {
+  margin: initial;
+  padding: 0.05em 0.15em;
+}
+
 a {
-  transition-duration: 0s;
+  -moz-transition: initial;
+  -webkit-transition: initial;
+  -ms-transition: initial;
+  transition: initial;
 }
 
-article.li .summary {
-  text-align: justify;
-  word-break: initial;
-  hyphens: auto;
+a:before {
+  -moz-transition: initial;
+  -webkit-transition: initial;
+  -ms-transition: initial;
+  transition: initial;
 }
 
-article.single .article-body p, article.single .article-body li {
-  text-align: justify;
-  word-break: initial;
-  hyphens: auto;
+a:hover {
+  border-bottom-color: #2ebaae;
+  color: #2ebaae !important;
 }
 
-article.single .article-body pre {
-  padding: 4px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+a:hover:before {
+  color: #2ebaae !important;
 }

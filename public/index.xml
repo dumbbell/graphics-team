@@ -6,8 +6,45 @@
     <description>Recent content on The FreeBSD Graphics Team</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 19 Oct 2014 20:10:00 +0100</lastBuildDate>
+    <lastBuildDate>Sun, 03 Apr 2016 02:35:00 +0200</lastBuildDate>
     <atom:link href="http://dumbbell.github.io/graphics-team/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>About the FreeBSD Graphics Team</title>
+      <link>http://dumbbell.github.io/graphics-team/about/</link>
+      <pubDate>Sun, 03 Apr 2016 02:35:00 +0200</pubDate>
+      
+      <guid>http://dumbbell.github.io/graphics-team/about/</guid>
+      <description>
+
+&lt;p&gt;The FreeBSD Graphics Team is responsible for all components of the
+graphics stack on FreeBSD. This includes video and input devices kernel
+drivers, the X.Org server, Mesa, Wayland and a bunch of applications and
+libraries around them.&lt;/p&gt;
+
+&lt;h2 id=&#34;team-members:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;Team members&lt;/h2&gt;
+
+&lt;p&gt;The main members are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Koop Mast&lt;/li&gt;
+&lt;li&gt;Jean-Sébastien Pédron&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;how-to-reach-us:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;How to reach us&lt;/h2&gt;
+
+&lt;p&gt;We can be reached through:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;the &lt;a href=&#34;https://lists.freebsd.org/mailman/listinfo/freebsd-x11&#34;&gt;freebsd-x11@FreeBSD.org
+mailing-list&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;the #freebsd-xorg IRC channel on EFnet.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We also publish what we work on on the &lt;a href=&#34;http://wiki.FreeBSD.org/Graphics&#34;&gt;FreeBSD wiki graphics
+portal&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Migrating xorg-dev to Git</title>
