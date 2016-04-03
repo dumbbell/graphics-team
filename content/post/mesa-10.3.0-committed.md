@@ -1,8 +1,10 @@
 +++
-date = "2014-10-17T20:10:00+01:00"
 title = "Mesa 10.3.0 committed!"
-image = "images/mesa.png"
-banner = "images/mesa.png"
+date = "2014-10-17T20:10:00+01:00"
+author = "Jean-Sébastien Pédron"
+
+#featured = "mesa.png"
+#featuredpath = "/images"
 
 categories = [ "The Ports tree" ]
 tags = [ "Mesa", "OpenCL", "Wayland" ]
@@ -27,6 +29,8 @@ such as:
 * Clover, the OpenCL library in Mesa.
 
 Beside those components, the X.Org server 1.15 requires Mesa 9.2+ too.
+
+<!--more-->
 
 ## Only for FreeBSD 10.1+
 

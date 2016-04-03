@@ -1,8 +1,10 @@
 +++
-date = "2014-10-17T20:20:00+01:00"
 title = "Why kernel video drivers?"
-image = "images/drm.png"
-banner = "images/drm.png"
+date = "2014-10-17T20:20:00+01:00"
+author = "Jean-Sébastien Pédron"
+
+#featured = "drm.png"
+#featuredpath = "/images"
 
 categories = [ "The Kernel" ]
 tags = [ "Video drivers" ]
@@ -19,6 +21,8 @@ and GPU makers.
 I'll try to explain the reasons I know, in the hope you'll better
 understand and accept this major change in the way we use video cards
 nowadays.
+
+<!--more-->
 
 * The **X server was an operating system by itself**: it was able to
   scan the PCI bus to find video devices and it manages the video

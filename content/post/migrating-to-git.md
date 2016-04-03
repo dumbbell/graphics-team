@@ -1,8 +1,10 @@
 +++
-date = "2014-10-19T20:10:00+01:00"
 title = "Migrating xorg-dev to Git"
-image = "images/logo-git.png"
-banner = "images/logo-git.png"
+date = "2014-10-19T20:10:00+01:00"
+author = "Jean-Sébastien Pédron"
+
+#featured = "logo-git.png"
+#featuredpath = "/images"
 
 categories = [ "The Ports tree" ]
 toc = false
@@ -15,6 +17,8 @@ Remember, this repository is used to work on the graphics stack ports
 before they go to the official Ports tree. For instance, this is where
 we worked on the update to Mesa 10.3.0. Now, that Mesa 10.3.0 is
 committed, xorg-dev contains Mesa 10.3.1.
+
+<!--more-->
 
 xorg-dev is a Subversion repository containing only the ports and
 infrastructure Makefiles which differ from the official Ports tree. The

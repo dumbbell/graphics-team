@@ -1,8 +1,10 @@
 +++
-date = "2014-10-19T20:10:00+01:00"
 title = "vt(4) enabled by default"
-image = "images/vt100.jpg"
-banner = "images/vt100.jpg"
+date = "2014-10-19T20:10:00+01:00"
+author = "Jean-Sébastien Pédron"
+
+featured = "vt100.jpg"
+featuredpath = "/images"
 
 categories = [ "The Kernel" ]
 tags = [ "Console" ]
@@ -22,6 +24,8 @@ For those who don't know it yet, vt(4) brings important features:
   was never taught about the KMS drivers, and this was a major
   regression for users because the screen was blank when vt-switching or
   terminating the X server.
+
+<!--more-->
 
 vt(4) has still some issues. Furthermore, it lacks some features
 compared to syscons(4). Known issues are [listed in the

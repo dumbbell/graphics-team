@@ -3,46 +3,99 @@ canonifyurls = true
 languageCode = "en-us"
 title = "The FreeBSD Graphics Team"
 
-theme = "icarus"
+theme = "future-imperfect"
 pygmentsstyle = "default"
 
 # Define the number of posts per page
-paginate = 10
-footnotereturnlinkcontents = "↩"
+paginate = 3
 
-[Params]
-    author = "The FreeBSD Graphics Team"
-    bio = "Maintainers of the userland and kernel parts of the graphics stack on FreeBSD"
-    site_description = "Informations around the graphics stack"
-    copyright = "The FreeBSD Graphics Team © 2016"
+[params]
+    description = "Information blog around the graphics stack on FreeBSD"
 
-    # For theme "Icarus".
-    date_format = "2006-01-02"
+    navbarTitle      = "The FreeBSD Graphics Team"
+    viewMorePostLink = "/post/"
 
-# Create custom menu entries by defining a label and a link for
-# them. Since you can also link posts, you've the option the
-# place the links before or after them.
-#
-# E.g.: "Home" appears before all linked posts in the menu
-# and "Tags" / "Categories" after them.
-[[params.menu]]
-    before = true
-    label  = "Home"
-    link   = "/"
+    # Social media buttons that appear on the sidebar
+    socialAppearAtTop    = false
+    socialAppearAtBottom = false
 
-[[params.menu]]
-    before = false
-    label  = "Tags"
-    link   = "tags/"
+    # Optional params
+    categoriesByCount    = true
+    includeReadingTime   = true
+    loadFavicon          = true
+    faviconVersion       = "1"
 
-[[params.menu]]
-    before = false
-    label  = "Categories"
-    link   = "categories/"
+# parms.intro will appear on the sidebar
+# This is optional, but it's suggested to use
+[params.intro]
+    header    = "The FreeBSD Graphics Team"
+    paragraph = "Information blog around the graphics stack on FreeBSD"
+    about     = "The FreeBSD Graphics Team is responsible for maintaining all pieces of the graphics stack, both in the kernel and userland. DRM video drivers, the X.Org server and Mesa are very good examples."
 
-# Enable and disable widgets for the right sidebar
-[Params.widgets]
-    recent_articles = true
-    categories = true
-    tags = true
-    tag_cloud = true
+# This will also appear on the sidebar.
+# A width of less than 100px is recommended
+# This is optional
+[params.intro.pic]
+    src       = "/images/logo-freebsd-100px.png"
+    circle    = false
+    imperfect = false
+    width     = ""
+    alt       = ""
+
+# Adjust the amount of recent posts on the sidebar.
+# This is optional. The default value 5 will be used
+#[params.postAmount]
+#    sidebar = 2
+
+# Set up your menu items in the navigation bar
+# You can use identifier to prepend a font awesome icon to your text
+[[menu.main]]
+    name = "Blog"
+    url = "/post"
+    identifier = "fa fa-newspaper-o"
+    weight = 1
+
+[[menu.main]]
+    name = "Categories"
+    url = "/categories"
+    identifier = "fa fa-sitemap"
+    weight = 2
+
+[[menu.main]]
+    name = "About"
+    url = "/about"
+    identifier = "fa fa-user"
+    weight = 3
+
+# Insert your username and the icon will apear on the page as long as
+# socialAppearAtTop or socialAppearAtBottom is set to true in the params area
+# The social media icons will appear on the sidebar
+[social]
+    github          = ""
+    bitbucket       = ""
+    jsfiddle        = ""
+    codepen         = ""
+    foursquare      = ""
+    dribbble        = ""
+    deviantart      = ""
+    behance         = ""
+    flickr          = ""
+    instagram       = ""
+    youtube         = ""
+    vimeo           = ""
+    vine            = ""
+    medium          = ""
+    wordpress       = ""
+    tumblr          = ""
+    xing            = ""
+    linkedin        = ""
+    slideshare      = ""
+    stackoverflow   = ""
+    reddit          = ""
+    pinterest       = ""
+    googleplus      = ""
+    facebook        = ""
+    facebook_admin  = ""
+    twitter_domain  = ""
+    twitter         = ""
+    email           = ""
