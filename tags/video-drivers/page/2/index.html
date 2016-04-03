@@ -1,0 +1,624 @@
+
+
+
+    
+
+
+
+
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        
+            <title>Video Drivers - The FreeBSD Graphics Team</title>
+        
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="generator" content="Hugo 0.15" />
+        
+    
+        
+        
+    
+
+    
+
+    <link rel="apple-touch-icon-precomposed"
+        href='http://dumbbell.github.io/graphics-team/favicon/apple-touch-icon-precomposed-1.png'>
+    <link rel="icon" href='http://dumbbell.github.io/graphics-team/favicon/favicon-1.png'>
+    
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-TileImage"
+        content='/favicon/mstile-1.png'>
+
+
+
+        
+        
+            
+                <meta name="description" content="Information blog around the graphics stack on FreeBSD">
+            
+        
+
+        
+        <meta property="og:title" content="Video Drivers" />
+<meta property="og:description" content="Information blog around the graphics stack on FreeBSD" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://dumbbell.github.io/graphics-team/tags/video-drivers/" />
+
+
+<meta property="og:updated_time" content="2014-10-17T20:10:00&#43;01:00"/>
+
+
+
+
+
+
+
+
+
+        
+<meta itemprop="name" content="Video Drivers">
+<meta itemprop="description" content="Information blog around the graphics stack on FreeBSD">
+
+
+        
+
+        
+        
+
+        
+            <link rel="stylesheet" href="http://dumbbell.github.io/graphics-team/css/google-font.css" />
+            <link rel="stylesheet" href="http://dumbbell.github.io/graphics-team/css/font-awesome.min.css" />
+            <link rel="stylesheet" href="http://dumbbell.github.io/graphics-team/css/main.css" />
+            <link rel="stylesheet" href="http://dumbbell.github.io/graphics-team/css/add-on.css" />
+            <link rel="stylesheet" href="http://dumbbell.github.io/graphics-team/css/monokai-sublime.css">
+            <link rel="stylesheet" href="http://dumbbell.github.io/graphics-team/css/custom.css">
+        
+        
+        
+        
+            
+        
+    </head>
+    <body>
+
+        
+        <div id="wrapper">
+
+    
+<header id="header">
+    
+        <h2><a href="http://dumbbell.github.io/graphics-team/">The FreeBSD Graphics Team</i></a></h2>
+    
+
+    <nav class="links">
+        <ul>
+            
+                <li>
+                    <a href="http://dumbbell.github.io/graphics-team/post/">
+                        
+                            <i class="fa fa-newspaper-o">&nbsp;</i>Blog
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="http://dumbbell.github.io/graphics-team/categories/">
+                        
+                            <i class="fa fa-sitemap">&nbsp;</i>Categories
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="http://dumbbell.github.io/graphics-team/about/">
+                        
+                            <i class="fa fa-user">&nbsp;</i>About
+                    </a>
+                </li>
+            
+        </ul>
+    </nav>
+    <nav class="main">
+        <ul>
+            
+            <li class="search">
+                <a class="fa-search" href="#search">Search</a>
+                <form id="search" method="get" action="//google.com/search">
+                    <input type="text" name="q" placeholder="Search" />
+                    <input type="hidden" name="q" value="site:http://dumbbell.github.io/graphics-team/">
+                </form>
+            </li>
+            <li class="menu">
+                <a class="fa-bars" href="#menu">Menu</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+<section id="menu">
+
+    
+        <section>
+            <form class="search" method="get" action="//google.com/search">
+                <input type="text" name="q" placeholder="Search" />
+                <input type="hidden" name="q" value="site:http://dumbbell.github.io/graphics-team/">
+            </form>
+        </section>
+
+    
+        <section>
+            <ul class="links">
+                
+                    <li>
+                        <a href="http://dumbbell.github.io/graphics-team/post/">
+                            <h3>
+                                
+                                    <i class="fa fa-newspaper-o">&nbsp;</i>
+                                
+                                Blog
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="http://dumbbell.github.io/graphics-team/categories/">
+                            <h3>
+                                
+                                    <i class="fa fa-sitemap">&nbsp;</i>
+                                
+                                Categories
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="http://dumbbell.github.io/graphics-team/about/">
+                            <h3>
+                                
+                                    <i class="fa fa-user">&nbsp;</i>
+                                
+                                About
+                            </h3>
+                        </a>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+        <section>
+            <ul class="links">
+                <header>
+                    <h3>Recent Posts</h3>
+                </header>
+                
+                    
+                
+
+                
+                    <li>
+                        <a href="http://dumbbell.github.io/graphics-team/post/migrating-to-git/"><p>Migrating xorg-dev to Git</p></a>
+                    </li>
+                
+                    <li>
+                        <a href="http://dumbbell.github.io/graphics-team/post/vt-enabled-by-default/"><p>vt(4) enabled by default</p></a>
+                    </li>
+                
+                    <li>
+                        <a href="http://dumbbell.github.io/graphics-team/post/why-kernel-video-drivers/"><p>Why kernel video drivers?</p></a>
+                    </li>
+                
+                    <li>
+                        <a href="http://dumbbell.github.io/graphics-team/post/mesa-10.3.0-committed/"><p>Mesa 10.3.0 committed!</p></a>
+                    </li>
+                
+                    <li>
+                        <a href="http://dumbbell.github.io/graphics-team/post/xdc-2014/"><p>FreeBSD at the XDC 2014</p></a>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+        
+</section>
+
+    
+    <div id="main">
+        
+            
+        
+
+        
+            <article class="post">
+    <header>
+    <div class="title">
+        
+            <h2><a href="http://dumbbell.github.io/graphics-team/post/mesa-10.3.0-committed/">Mesa 10.3.0 committed!</a></h2>
+        
+        
+    </div>
+    <div class="meta">
+        
+            
+        
+
+        <time class="published"
+            datetime='2014-10-17'>
+            October 17, 2014</time>
+        <span class="author">Jean-Sébastien Pédron</span>
+        
+            <p>1 minute read</p>
+        
+        
+    </div>
+</header>
+
+    
+
+    <p>Today, <a href="https://svnweb.freebsd.org/ports?view=revision&amp;revision=371035">Koop Mast committed an update to the Mesa
+ports</a>
+to have both 9.1.7 and 10.3.0 available.</p>
+
+<h2 id="what-s-new:299e12da2ec80e879bf4686011266825">What&rsquo;s new?</h2>
+
+<p>Mesa 10.3 brings <strong>major improvements in stability and performance</strong>,
+especially for Radeon owners, compared to Mesa 9.1. For instance, it
+fixes many of the GPU lockups you may see.</p>
+
+<p>With Mesa 10.3.0 comes a new port as well: <code>graphics/gbm</code>. This buffer
+management library is used by other components inside and outside Mesa,
+such as:</p>
+
+<ul>
+<li>GLAMOR, the 2D acceleration API based on OpenGL, used by at least newer Radeon cards;</li>
+<li>Weston, the reference compositor from the Wayland project;</li>
+<li>Clover, the OpenCL library in Mesa.</li>
+</ul>
+
+<p>Beside those components, the X.Org server 1.15 requires Mesa 9.2+ too.</p>
+
+    <footer>
+        <ul class="actions">
+            <li><a href="http://dumbbell.github.io/graphics-team/post/mesa-10.3.0-committed/" class="button big">Continue Reading</a></li>
+        </ul>
+        <ul class="stats">
+    
+
+    
+        
+            <li>
+                
+                    <i class="fa fa-sitemap">&nbsp;</i>
+                
+        
+
+                
+                    Category
+                
+            </li>
+    
+
+    
+        <li><a href="http://dumbbell.github.io/graphics-team/categories/the-ports-tree">The Ports tree</a></li>
+    
+</ul>
+
+    </footer>
+</article>
+
+        
+            <article class="post">
+    <header>
+    <div class="title">
+        
+            <h2><a href="http://dumbbell.github.io/graphics-team/post/xdc-2014/">FreeBSD at the XDC 2014</a></h2>
+        
+        
+    </div>
+    <div class="meta">
+        
+            
+        
+
+        <time class="published"
+            datetime='2014-10-17'>
+            October 17, 2014</time>
+        <span class="author">Jean-Sébastien Pédron</span>
+        
+            <p>4 minute read</p>
+        
+        
+    </div>
+</header>
+
+    
+    
+
+    
+        
+        
+
+
+
+
+    
+
+
+        
+
+        <a href="http://dumbbell.github.io/graphics-team/post/xdc-2014/" class="image featured">
+            <img src="http://dumbbell.github.io/graphics-team/images/xdc-2014.jpg" alt="" />
+        </a>
+    
+
+
+    <p>The <strong>X Developer&rsquo;s Conference</strong> (XDC) is held every year, in
+alternation between Europe and North America. This is a great
+occasion for users and developers interested in the graphics stack
+to meet in person and discuss. <a href="http://wiki.x.org/wiki/Events/XDC2014/">This year&rsquo;s edition was in Bordeaux,
+France</a>, from October 8th
+through 10th.</p>
+
+<p>François Tigeot, from DragonFlyBSD, and I attended the conference. We
+met Matthieu Herrb from OpenBSD there. The goal was to show that BSDs
+are still interested in the graphics stack and that we want to work with
+the community. I think that was a huge success!</p>
+
+<p>We had a warm welcome: people were asking questions about how video
+hardware was supported, how desktop environments were doing, how we are
+working with the kernel drivers, and so on.</p>
+
+    <footer>
+        <ul class="actions">
+            <li><a href="http://dumbbell.github.io/graphics-team/post/xdc-2014/" class="button big">Continue Reading</a></li>
+        </ul>
+        <ul class="stats">
+    
+
+    
+        
+            <li>
+                
+                    <i class="fa fa-sitemap">&nbsp;</i>
+                
+        
+
+                
+                    Category
+                
+            </li>
+    
+
+    
+        <li><a href="http://dumbbell.github.io/graphics-team/categories/events">Events</a></li>
+    
+</ul>
+
+    </footer>
+</article>
+
+        
+
+        
+<ul class="actions pagination">
+    
+        <li><a href="http://dumbbell.github.io/graphics-team/tags/video-drivers/"
+                class="button big previous">Previous Page</a></li>
+    
+
+    
+        <li><a href="#" class="disabled button big next">Next Page</a></li>
+    
+</ul>
+
+    </div>
+    
+<section id="sidebar">
+
+    
+        <section id="intro">
+            
+            
+                
+                    <img src="http://dumbbell.github.io/graphics-team/images/logo-freebsd-100px.png" width="" alt="" />
+                
+            
+            
+                <header>
+                    <h2>The FreeBSD Graphics Team</h2>
+                    <p>Information blog around the graphics stack on FreeBSD</p>
+                </header>
+            
+            
+        </section>
+
+    
+        <section id="recent-posts">
+            <ul class="posts">
+                <header>
+                    <h3>Recent Posts</h3>
+                </header>
+                
+                    
+                
+
+                
+                    
+                
+
+                
+                    <li>
+                        <article>
+                            <header>
+                                <h3><a href="http://dumbbell.github.io/graphics-team/post/migrating-to-git/">Migrating xorg-dev to Git</a></h3>
+                                
+                                    
+                                
+                                <time class="published" datetime=
+                                    '2014-10-19'>
+                                    October 19, 2014</time>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <h3><a href="http://dumbbell.github.io/graphics-team/post/vt-enabled-by-default/">vt(4) enabled by default</a></h3>
+                                
+                                    
+                                
+                                <time class="published" datetime=
+                                    '2014-10-19'>
+                                    October 19, 2014</time>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <h3><a href="http://dumbbell.github.io/graphics-team/post/why-kernel-video-drivers/">Why kernel video drivers?</a></h3>
+                                
+                                    
+                                
+                                <time class="published" datetime=
+                                    '2014-10-17'>
+                                    October 17, 2014</time>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <h3><a href="http://dumbbell.github.io/graphics-team/post/mesa-10.3.0-committed/">Mesa 10.3.0 committed!</a></h3>
+                                
+                                    
+                                
+                                <time class="published" datetime=
+                                    '2014-10-17'>
+                                    October 17, 2014</time>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <h3><a href="http://dumbbell.github.io/graphics-team/post/xdc-2014/">FreeBSD at the XDC 2014</a></h3>
+                                
+                                    
+                                
+                                <time class="published" datetime=
+                                    '2014-10-17'>
+                                    October 17, 2014</time>
+                            </header>
+                        </article>
+                    </li>
+                
+
+                
+                    <li>
+                        <ul class="actions">
+                            <li><a href=
+                            
+                                /post/
+                            
+                            class="button">View more posts</a></li>
+                        </ul>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+    
+    
+    
+        <section id="categories">
+            <ul class="posts">
+                <header>
+                    <h3><a href="http://dumbbell.github.io/graphics-team/categories/">Categories</a></h3>
+                </header>
+
+                
+                    
+                
+
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="http://dumbbell.github.io/graphics-team/categories/the-ports-tree/">the-ports-tree</a>
+                                <span style="float:right;">2</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="http://dumbbell.github.io/graphics-team/categories/the-kernel/">the-kernel</a>
+                                <span style="float:right;">2</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="http://dumbbell.github.io/graphics-team/categories/events/">events</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+            </ul>
+        </section>
+    
+
+    
+        
+        <section class="blurb">
+            <h2>About</h2>
+            <p>The FreeBSD Graphics Team is responsible for maintaining all pieces of the graphics stack, both in the kernel and userland. DRM video drivers, the X.Org server and Mesa are very good examples.</p>
+
+            <ul class="actions">
+                <li><a href="http://dumbbell.github.io/graphics-team/about/" class="button">Learn More</a></li>
+            </ul>
+        </section>
+        
+
+    
+        <section id="footer">
+            
+
+            <p class="copyright">&copy; The FreeBSD Graphics Team. Design: <a href="http://html5up.net" target="_blank">HTML5 UP</a>. Ported by <a href="//github.com/jpescador" target="_blank">Julio Pescador</a>. Powered by <a href="//gohugo.io" target="_blank">Hugo</a></p>
+        </section>
+
+</section>
+
+            </div>
+        <a id="back-to-top" href="#" class="fa fa-arrow-up fa-border fa-2x"></a>
+        
+        
+
+        
+            <script src="http://dumbbell.github.io/graphics-team/js/jquery.min.js"></script>
+            <script src="http://dumbbell.github.io/graphics-team/js/skel.min.js"></script>
+            <script src="http://dumbbell.github.io/graphics-team/js/util.js"></script>
+            <script src="http://dumbbell.github.io/graphics-team/js/main.js"></script>
+            <script src="http://dumbbell.github.io/graphics-team/js/backToTop.js"></script>
+            <script src="http://dumbbell.github.io/graphics-team/js/highlight.pack.js"></script>
+        
+            
+            <script>hljs.initHighlightingOnLoad();</script>
+            
+    </body>
+</html>
+
