@@ -8,7 +8,6 @@ featuredpath = "/images"
 
 categories = []
 toc = false
-draft = true
 +++
 
 We finally took time to recover the content of the previous lost blog,

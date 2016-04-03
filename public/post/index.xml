@@ -6,8 +6,27 @@
     <description>Recent content in Posts on The FreeBSD Graphics Team</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 19 Oct 2014 20:10:00 +0100</lastBuildDate>
+    <lastBuildDate>Sat, 19 Mar 2016 12:00:48 +0100</lastBuildDate>
     <atom:link href="http://dumbbell.github.io/graphics-team/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Welcome to the new blog</title>
+      <link>http://dumbbell.github.io/graphics-team/post/welcome/</link>
+      <pubDate>Sat, 19 Mar 2016 12:00:48 +0100</pubDate>
+      
+      <guid>http://dumbbell.github.io/graphics-team/post/welcome/</guid>
+      <description>&lt;p&gt;We finally took time to recover the content of the previous lost blog,
+hosted on &lt;code&gt;http://blogs.freebsdish.org/graphics/&lt;/code&gt; and create this new
+blog.&lt;/p&gt;
+
+&lt;p&gt;Dave Cottlehuber (dch on #freebsd-xorg) was of a great help
+to achieve that! He recovered the articles &lt;a href=&#34;http://web.archive.org/web/20150905061215/http://blogs.freebsdish.org/graphics/&#34;&gt;from the Web
+archives&lt;/a&gt;
+and made them available to us. He also suggested the tools
+we are now using to create and host this blog: &lt;a href=&#34;https://pages.github.com/&#34;&gt;GitHub
+pages&lt;/a&gt; and &lt;a href=&#34;http://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Migrating xorg-dev to Git</title>
